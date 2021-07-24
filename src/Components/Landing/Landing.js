@@ -1,124 +1,99 @@
 import useStyles from './styles';
 import Signin from '../../Svg/Singin';
 import Login from '../../Svg/Login';
-import React from 'react';
+import Fast from '../../Svg/Fast';
+import Plus from '../../Svg/Plus';
+import Shield from '../../Svg/Shield';
+import ExploreCont from '../../Svg/ExploreCont';
+import Button from '@material-ui/core/Button';
+// import { shadows } from '@material-ui/system';
+import Box from '@material-ui/core/Box';
 function Landing() {
   const classes = useStyles();
-
-  const test = (e) => {
-    console.log(e.target.parentNode);
-  };
-  const wRippleEffect = function (e) {
-    const butn = e.target;
-    if (butn.localName === 'button') {
-      const x = e.clientX;
-      const y = e.clientY;
-      const left = e.target.offsetLeft;
-      const top = e.target.offsetTop;
-      const xInside = x - left;
-      const yInside = y - top;
-      console.log(left, top);
-      const circle = document.createElement('span');
-      circle.classList.add(classes.circle1);
-      circle.style.top = yInside + 'px';
-      circle.style.left = xInside + 'px';
-      console.log(butn.localName);
-      butn.appendChild(circle);
-      setTimeout(() => butn.removeChild(circle), 3000);
-    } else if (butn.localName === 'span') {
-      const x = e.clientX;
-      const y = e.clientY;
-      const left = e.target.parentNode.offsetLeft;
-      const top = e.target.parentNode.offsetTop;
-      const xInside = x - left;
-      const yInside = y - top;
-      console.log(left, top);
-      const circle = document.createElement('span');
-      circle.classList.add(classes.circle1);
-      circle.style.top = yInside + 'px';
-      circle.style.left = xInside + 'px';
-      console.log(butn.localName);
-      butn.appendChild(circle);
-      setTimeout(() => butn.removeChild(circle), 3000);
-    }
-  };
-  const pRippleEffect = function (e) {
-    const butn = e.target;
-    if (butn.localName === 'button') {
-      const x = e.clientX;
-      const y = e.clientY;
-      const left = e.target.offsetLeft;
-      const top = e.target.offsetTop;
-      const xInside = x - left;
-      const yInside = y - top;
-      console.log(left, top);
-      const circle = document.createElement('span');
-      circle.classList.add(classes.circle2);
-      circle.style.top = yInside + 'px';
-      circle.style.left = xInside + 'px';
-      console.log(butn.localName);
-      butn.appendChild(circle);
-      setTimeout(() => butn.removeChild(circle), 3000);
-    } else if (butn.localName === 'span') {
-      const x = e.clientX;
-      const y = e.clientY;
-      const left = e.target.parentNode.offsetLeft;
-      const top = e.target.parentNode.offsetTop;
-      const xInside = x - left;
-      const yInside = y - top;
-      console.log(left, top);
-      const circle = document.createElement('span');
-      circle.classList.add(classes.circle2);
-      circle.style.top = yInside + 'px';
-      circle.style.left = xInside + 'px';
-      console.log(butn.localName);
-      butn.appendChild(circle);
-      setTimeout(() => butn.removeChild(circle), 3000);
-    }
-  };
   return (
-    <React.Fragment>
-      <div className={classes.landing}>
-        <header className={classes.header}>
-          <div className={classes.nav}>
-            <span>Zion</span>
-            <ul>
-              <li>Home</li>
-              <li>Contact</li>
-              <li>About Us</li>
-            </ul>
-          </div>
-        </header>
-        <main className={classes.main}>
-          <div className={classes.title}>
-            <p>
-              Zion is a <span className={classes.platform}>platform</span> that
-              allows you to
-            </p>
-            <p>
-              <span className={classes.expose}>expose</span> your work
-            </p>
-            <div className={classes.titleButton}>
-              <button className={classes.button1} onClick={wRippleEffect}>
-                <span>
-                  <Signin />
-                  Sign in
-                </span>
-              </button>
+    <div className={classes.landing}>
+      <header className={classes.header}>
+        <div className={classes.nav}>
+          <span>Zion</span>
+          <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About Us</li>
+          </ul>
+        </div>
+      </header>
+      <main className={classes.main}>
+        <div className={classes.title}>
+          <p>
+            Zion is a <span className={classes.platform}>platform</span> that
+            allows you to
+          </p>
+          <p>
+            <span className={classes.expose}>expose</span> your work
+          </p>
+          <Button variant='contained'>
+            Explore Content
+            <ExploreCont />
+          </Button>
+        </div>
+        <div className={classes.titleButton}>
+          <Button variant='outlined'>
+            <Login />
+            Log in
+          </Button>
+          <Button
+            variant='contained'
+            style={{ color: 'white', backgroundColor: '#7768F2' }}
+            // disabled
+            // classes={{
+            //   titleButton: classes.titleButton, // class name, e.g. `root-x`
+            //   disabled: classes.disabled, // class name, e.g. `disabled-x`
+            // }}
+          >
+            <Signin />
+            Sign up
+          </Button>
+        </div>
 
-              <button className={classes.button2} onClick={pRippleEffect}>
-                <span>
-                  <Login />
-                  Log in
-                </span>
-              </button>
-            </div>
+        <div className={classes.rectContainer}>
+          <div className={classes.rect} style={{ backgroundColor: '#8B81FF' }}>
+            <Box boxShadow={3} style={{ margin: '24px 24px 0px 24px' }}>
+              <div>
+                <Fast />
+              </div>
+            </Box>{' '}
+            <span>FAST</span>
+            <p>No more time wasting </p>
+            <p style={{ margin: '0px 25px 30px 25px' }}>Easily find services</p>
           </div>
-        </main>
-      </div>
-    </React.Fragment>
+          <div className={classes.rect} style={{ backgroundColor: '#F9C249' }}>
+            {' '}
+            <Box boxShadow={3} style={{ margin: '24px 24px 0px 24px' }}>
+              <div>
+                <Shield />
+              </div>
+            </Box>{' '}
+            <span>SIMPLE</span>
+            <p>No compications</p>
+            <p style={{ margin: '0px 25px 30px 25px' }}>
+              Everything is direct, P2P
+            </p>
+          </div>
+          <div className={classes.rect} style={{ backgroundColor: '#FF6B6B' }}>
+            {' '}
+            <Box boxShadow={3} style={{ margin: '24px 24px 0px 24px' }}>
+              <div>
+                <Plus />
+              </div>
+            </Box>{' '}
+            <span>EXPOSE</span>
+            <p>Show you work to others</p>
+            <p style={{ margin: '0px 25px 30px 25px' }}>Gain recognition</p>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
 
 export default Landing;
-// butn.parentNode.insertBefore(circle);

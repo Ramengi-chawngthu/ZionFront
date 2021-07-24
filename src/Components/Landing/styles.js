@@ -1,10 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     height: '64px',
     paddingTop: '15px',
   },
+  // footer: {
+  //   height: '64px',
+  //   width: '100%',
+  //   paddingBottom: '15px',
+  // },
 
   nav: {
     color: '#18191F',
@@ -12,7 +17,7 @@ const useStyles = makeStyles({
     margin: '0 auto',
     display: 'flex',
     justifyContent: 'space-between',
-    fontSize: '14px',
+    fontSize: '18px',
     fontWeight: '600',
     '& ul': {
       padding: 0,
@@ -47,6 +52,31 @@ const useStyles = makeStyles({
       fontSize: '34px',
       margin: '10px 0',
     },
+    '& button': {
+      textTransform: 'none',
+      boxSizing: 'border-box',
+      cursor: 'pointer',
+      margin: '0 5px',
+      height: '60px',
+      width: '152px',
+      borderRadius: '48px',
+      fontSize: '12px',
+      fontWeight: '700',
+      letterSpacing: '1px',
+      fontFamily: 'Gilroy-Bold, sans-serif',
+      lineHeight: '20px',
+      color: 'white',
+      backgroundColor: '#FF6B6B',
+      '&:hover': {
+        backgroundColor: '#FFA06B',
+        color: 'white',
+      },
+      '& svg': {
+        height: '26px',
+        width: '22px',
+        marginLeft: '5px',
+      },
+    },
   },
 
   platform: {
@@ -59,74 +89,99 @@ const useStyles = makeStyles({
 
   titleButton: {
     marginTop: '30px',
-
+    paddingTop: '50px',
+    textAlign: 'center',
     '& button': {
-      position: 'relative',
-      overflow: 'hidden',
-      borderRadius: '48px',
-      outline: 'none',
-
+      textTransform: 'none',
       boxSizing: 'border-box',
       margin: '0 5px',
       height: '48px',
       width: '130px',
+      borderRadius: '48px',
       fontSize: '12px',
       fontWeight: '700',
       letterSpacing: '1px',
       fontFamily: 'Gilroy-Bold, sans-serif',
       lineHeight: '20px',
-
-      '& span': {
-        // position: 'relative',
-        overflow: 'visible',
-        margin: '0 auto',
-        width: '60%',
-        display: 'flex',
-        justifyContent: 'space-around',
-
-        '& svg': {
-          height: '20px',
-          width: '20px',
-        },
+      cursor: 'pointer',
+      color: '#7768F2',
+      backgroundColor: 'white',
+      borderWidth: '2px',
+      borderColor: ' #7768F2',
+      '&$disabled': {
+        backgroundColor: '#7768F2',
+        color: 'white',
+        // cursor: 'not-allowed',
+        pointerEvents: 'auto',
+      },
+      '& svg': {
+        height: '20px',
+        width: '20px',
+        marginRight: '5px',
       },
     },
   },
-  circle1: {
-    position: 'absolute',
-    backgroundColor: '#fff',
-    width: '100px',
-    height: '100px',
-    borderRadius: '50%',
-    transform: 'translate(-50%,-50%) scale(0)',
-    animation: `$scale 0.5s ease-out`,
+  disabled: {},
+  rectContainer: {
+    margin: '0 auto',
+    marginTop: '30px',
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  circle2: {
-    position: 'absolute',
-    backgroundColor: '#7768F2',
-    width: '100px',
-    height: '100px',
-    borderRadius: '50%',
-    transform: 'translate(-50%,-50%) scale(0)',
-    animation: `$scale 0.5s ease-out`,
-  },
-  button1: {
-    border: 0,
-    color: '#FFF',
-    backgroundColor: '#7768F2',
-    border: '2px solid #7768F2',
-  },
-  button2: {
-    color: '#7768F2',
-    backgroundColor: '#FFF',
-    border: '2px solid #7768F2',
-  },
-
-  '@keyframes scale': {
-    to: {
-      transform: 'translate(-50%,-50%) scale(3)',
-      opacity: '0.1',
+  rect: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    color: 'white',
+    width: '314px',
+    border: '1px',
+    height: '202px',
+    borderRadius: '20px',
+    '& span': {
+      color: 'white',
+      margin: '40px 0px 0px 12px',
+      fontSize: '26px',
+      fontFamily: 'Gilroy-Bold, sans-serif',
+    },
+    '& p': {
+      fontWeight: 'regular',
+      color: 'white',
+      fontSize: '22px',
+      margin: '25px 25px 0px 25px',
+      fontFamily: 'Gilroy-medium, sans-serif',
+    },
+    '& div': {
+      width: '72px',
+      border: '0px',
+      height: '68px',
+      borderRadius: '10px',
+      backgroundColor: 'white',
+      '& svg': {
+        height: '40px',
+        width: '45px',
+        margin: '14px 12px 14px 13px',
+      },
     },
   },
-});
+  login: {
+    backgroundColor: '#7768F2',
+    borderWidth: '2px',
+    borderColor: 'white',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: '#688FF2',
+      color: 'white',
+      // borderColor: '#688FF2',
+    },
+  },
+  signup: {
+    backgroundColor: 'white',
+    borderWidth: '2px',
+    borderColor: '#7768F2',
+    color: '#7768F2',
+  },
+}));
 
 export default useStyles;
