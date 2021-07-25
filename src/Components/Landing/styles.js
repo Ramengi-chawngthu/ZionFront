@@ -1,187 +1,229 @@
 import { makeStyles } from '@material-ui/core/styles';
+import Smoke from '../../Images/Smoke.png';
 
-const useStyles = makeStyles((theme) => ({
-  header: {
-    height: '64px',
-    paddingTop: '15px',
-  },
-  // footer: {
-  //   height: '64px',
-  //   width: '100%',
-  //   paddingBottom: '15px',
-  // },
+const useStyles = makeStyles(
+  (theme) => ({
+    header: {
+      height: 64,
+      paddingTop: 15,
+    },
 
-  nav: {
-    color: '#18191F',
-    width: '80%',
-    margin: '0 auto',
-    display: 'flex',
-    justifyContent: 'space-between',
-    fontSize: '18px',
-    fontWeight: '600',
-    '& ul': {
-      padding: 0,
-      width: '300px',
-      listStyle: 'none',
+    nav: {
+      color: '#18191F',
+      width: '80%',
+      margin: '0 auto',
       display: 'flex',
       justifyContent: 'space-between',
-      '& li': {
+      fontSize: 14,
+      fontWeight: '600',
+      '& ul': {
+        padding: 0,
+        width: 300,
+        listStyle: 'none',
+        display: 'flex',
+        justifyContent: 'space-between',
+        '& li': {
+          cursor: 'pointer',
+        },
+      },
+
+      '& span': {
         cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
       },
     },
 
-    '& span': {
-      cursor: 'pointer',
-      display: 'flex',
-      alignItems: 'center',
+    main: {
+      margin: '0 auto',
+      width: '80%',
     },
-  },
 
-  main: {
-    margin: '0 auto',
-    width: '80%',
-  },
+    title: {
+      paddingTop: 50,
+      textAlign: 'center',
 
-  title: {
-    paddingTop: '50px',
-    textAlign: 'center',
-
-    '& p': {
-      fontWeight: 'bolder',
-      color: '#3F2F6A',
-      fontSize: '34px',
-      margin: '10px 0',
-    },
-    '& button': {
-      textTransform: 'none',
-      boxSizing: 'border-box',
-      cursor: 'pointer',
-      margin: '0 5px',
-      height: '60px',
-      width: '152px',
-      borderRadius: '48px',
-      fontSize: '12px',
-      fontWeight: '700',
-      letterSpacing: '1px',
-      fontFamily: 'Gilroy-Bold, sans-serif',
-      lineHeight: '20px',
-      color: 'white',
-      backgroundColor: '#FF6B6B',
-      '&:hover': {
-        backgroundColor: '#FFA06B',
-        color: 'white',
-      },
-      '& svg': {
-        height: '26px',
-        width: '22px',
-        marginLeft: '5px',
+      '& p': {
+        fontWeight: 'bolder',
+        color: '#3F2F6A',
+        fontSize: 34,
+        margin: '10px 0',
       },
     },
-  },
 
-  platform: {
-    color: '#FF6B6B',
-  },
+    platform: {
+      color: '#FF6B6B',
+    },
 
-  expose: {
-    color: '#7768F2',
-  },
-
-  titleButton: {
-    marginTop: '30px',
-    paddingTop: '50px',
-    textAlign: 'center',
-    '& button': {
-      textTransform: 'none',
-      boxSizing: 'border-box',
-      margin: '0 5px',
-      height: '48px',
-      width: '130px',
-      borderRadius: '48px',
-      fontSize: '12px',
-      fontWeight: '700',
-      letterSpacing: '1px',
-      fontFamily: 'Gilroy-Bold, sans-serif',
-      lineHeight: '20px',
-      cursor: 'pointer',
+    expose: {
       color: '#7768F2',
-      backgroundColor: 'white',
-      borderWidth: '2px',
-      borderColor: ' #7768F2',
-      '&$disabled': {
-        backgroundColor: '#7768F2',
-        color: 'white',
-        // cursor: 'not-allowed',
-        pointerEvents: 'auto',
+    },
+
+    titleButton: {
+      marginTop: 30,
+
+      '& button': {
+        textTransform: 'none',
+        boxSizing: 'border-box',
+        margin: '0 5px',
+        height: 48,
+        width: 130,
+        borderRadius: 48,
+        fontSize: 12,
+        letterSpacing: 1,
+        fontFamily: 'Gilroy-Bold, sans-serif',
+        lineHeight: 20,
+        cursor: 'pointer',
+
+        '& svg': {
+          height: 20,
+          width: 20,
+          marginRight: 5,
+        },
       },
+    },
+
+    titleBtn1: {
+      '&:hover': {
+        backgroundColor: theme.palette.primary.main,
+      },
+    },
+
+    titleBtn2: {
+      border: '2px solid #7768F2',
+      '&:hover': {
+        backgroundColor: '#FFF',
+        border: '2px solid #7768F2',
+      },
+    },
+
+    image: {
+      margin: '0 auto',
+      marginTop: 100,
+      backgroundImage: `url(${Smoke})`,
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      width: 300,
+      height: 300,
+    },
+
+    exploreContent: {
+      display: 'flex',
+      justifyContent: 'center',
+      margin: '0 auto',
+      padding: '50px 0',
+    },
+
+    exploreBtn: {
+      textTransform: 'none',
+      boxSizing: 'border-box',
+      margin: '0 5px',
+      height: 52,
+      width: 200,
+      borderRadius: 45,
+      fontSize: 13.5,
+      letterSpacing: 0.5,
+      fontFamily: 'Gilroy-Medium, sans-serif',
+      lineHeight: 20,
+      cursor: 'pointer',
+      color: '#FFF',
+
       '& svg': {
-        height: '20px',
-        width: '20px',
-        marginRight: '5px',
+        height: 20,
+        width: 20,
+        marginLeft: 10,
+      },
+
+      '&:hover': {
+        backgroundColor: theme.palette.secondary.main,
       },
     },
-  },
-  disabled: {},
-  rectContainer: {
-    margin: '0 auto',
-    marginTop: '30px',
-    width: '80%',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  rect: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    color: 'white',
-    width: '314px',
-    border: '1px',
-    height: '202px',
-    borderRadius: '20px',
-    '& span': {
-      color: 'white',
-      margin: '40px 0px 0px 12px',
-      fontSize: '26px',
-      fontFamily: 'Gilroy-Bold, sans-serif',
-    },
-    '& p': {
-      fontWeight: 'regular',
-      color: 'white',
-      fontSize: '22px',
-      margin: '25px 25px 0px 25px',
-      fontFamily: 'Gilroy-medium, sans-serif',
-    },
-    '& div': {
-      width: '72px',
-      border: '0px',
-      height: '68px',
-      borderRadius: '10px',
-      backgroundColor: 'white',
+
+    cards: {
+      padding: '100px 0 200px 0',
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+
+      '& div': {
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        color: '#FFF',
+        margin: 3,
+        width: 280,
+        minWidth: 280,
+        height: 250,
+        borderRadius: 16,
+      },
+
       '& svg': {
-        height: '40px',
-        width: '45px',
-        margin: '14px 12px 14px 13px',
+        margin: '0 auto',
+        width: 90,
+        height: 90,
+      },
+
+      '& p:nth-of-type(1)': {
+        marginTop: 0,
+        textTransform: 'uppercase',
+        fontSize: '19px',
+      },
+
+      '& p:nth-of-type(2), p:nth-of-type(3)': {
+        fontFamily: 'Gilroy-Medium, sans-serif',
+        fontSize: '14px',
+      },
+
+      '& p:nth-of-type(2)': {
+        marginBottom: 0,
+      },
+
+      '& p:nth-of-type(3)': {
+        marginTop: 0,
       },
     },
-  },
-  login: {
-    backgroundColor: '#7768F2',
-    borderWidth: '2px',
-    borderColor: 'white',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: '#688FF2',
-      color: 'white',
-      // borderColor: '#688FF2',
+
+    card1: {
+      backgroundColor: '#8B81FF',
     },
-  },
-  signup: {
-    backgroundColor: 'white',
-    borderWidth: '2px',
-    borderColor: '#7768F2',
-    color: '#7768F2',
-  },
-}));
+
+    card2: {
+      backgroundColor: '#E580E4',
+    },
+
+    card3: {
+      backgroundColor: '#FF6B6B',
+    },
+
+    footer: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      position: 'relative',
+      alignItems: 'center',
+      color: '#FFF',
+      height: 58,
+      width: '100%',
+      backgroundColor: '#352957',
+      fontSize: '10px',
+      '& p': {
+        marginLeft: '46.5%',
+        // left: '46.5%',
+      },
+      '& div': {
+        marginLeft: 'auto',
+        marginRight: '20%',
+        '& svg': {
+          marginLeft: '20px',
+        },
+      },
+    },
+  }),
+  { index: 1 }
+);
 
 export default useStyles;

@@ -2,12 +2,15 @@ import useStyles from './styles';
 import Signin from '../../Svg/Singin';
 import Login from '../../Svg/Login';
 import Fast from '../../Svg/Fast';
-import Plus from '../../Svg/Plus';
-import Shield from '../../Svg/Shield';
-import ExploreCont from '../../Svg/ExploreCont';
+import Simple from '../../Svg/Simple';
+import Expose from '../../Svg/Expose';
+import ExploreContent from '../../Svg/ExploreContent';
 import Button from '@material-ui/core/Button';
-// import { shadows } from '@material-ui/system';
-import Box from '@material-ui/core/Box';
+import YoutubeIcon from '../../Svg/YoutubeIcon';
+import TwitterIcon from '../../Svg/TwitterIcon';
+import LinkedinIcon from '../../Svg/LinkedinIcon';
+import InstaIcon from '../../Svg/InstaIcon';
+
 function Landing() {
   const classes = useStyles();
   return (
@@ -22,6 +25,7 @@ function Landing() {
           </ul>
         </div>
       </header>
+
       <main className={classes.main}>
         <div className={classes.title}>
           <p>
@@ -31,67 +35,69 @@ function Landing() {
           <p>
             <span className={classes.expose}>expose</span> your work
           </p>
-          <Button variant='contained'>
-            Explore Content
-            <ExploreCont />
-          </Button>
+          <div className={classes.titleButton}>
+            <Button
+              variant='contained'
+              color='primary'
+              className={classes.titleBtn1}
+            >
+              <Signin />
+              Sign in
+            </Button>
+            <Button
+              variant='outlined'
+              color='primary'
+              className={classes.titleBtn2}
+            >
+              <Login />
+              Log in
+            </Button>
+          </div>
         </div>
-        <div className={classes.titleButton}>
-          <Button variant='outlined'>
-            <Login />
-            Log in
-          </Button>
+        <div className={classes.image}></div> {/*Just a placeholder for now*/}
+        <div className={classes.exploreContent}>
           <Button
             variant='contained'
-            style={{ color: 'white', backgroundColor: '#7768F2' }}
-            // disabled
-            // classes={{
-            //   titleButton: classes.titleButton, // class name, e.g. `root-x`
-            //   disabled: classes.disabled, // class name, e.g. `disabled-x`
-            // }}
+            color='secondary'
+            className={classes.exploreBtn}
           >
-            <Signin />
-            Sign up
+            Explore Content
+            <ExploreContent />
           </Button>
         </div>
+        <div className={classes.cards}>
+          <div className={classes.card1}>
+            <Fast />
+            <p>Fast</p>
+            <p>No more time wasting</p>
+            <p>Easily find services</p>
+          </div>
 
-        <div className={classes.rectContainer}>
-          <div className={classes.rect} style={{ backgroundColor: '#8B81FF' }}>
-            <Box boxShadow={3} style={{ margin: '24px 24px 0px 24px' }}>
-              <div>
-                <Fast />
-              </div>
-            </Box>{' '}
-            <span>FAST</span>
-            <p>No more time wasting </p>
-            <p style={{ margin: '0px 25px 30px 25px' }}>Easily find services</p>
+          <div className={classes.card2}>
+            <Simple />
+            <p>Simple</p>
+            <p>No complication</p>
+            <p>Everything is Peer to Peer(P2P)</p>
           </div>
-          <div className={classes.rect} style={{ backgroundColor: '#F9C249' }}>
-            {' '}
-            <Box boxShadow={3} style={{ margin: '24px 24px 0px 24px' }}>
-              <div>
-                <Shield />
-              </div>
-            </Box>{' '}
-            <span>SIMPLE</span>
-            <p>No compications</p>
-            <p style={{ margin: '0px 25px 30px 25px' }}>
-              Everything is direct, P2P
-            </p>
-          </div>
-          <div className={classes.rect} style={{ backgroundColor: '#FF6B6B' }}>
-            {' '}
-            <Box boxShadow={3} style={{ margin: '24px 24px 0px 24px' }}>
-              <div>
-                <Plus />
-              </div>
-            </Box>{' '}
-            <span>EXPOSE</span>
-            <p>Show you work to others</p>
-            <p style={{ margin: '0px 25px 30px 25px' }}>Gain recognition</p>
+
+          <div className={classes.card3}>
+            <Expose />
+            <p>Expose</p>
+            <p>Show your work to others</p>
+            <p>Gain recognition</p>
           </div>
         </div>
       </main>
+
+      <footer className={classes.footer}>
+        <p>&#169; 2021 Zion. All rights reserved</p>
+        <div>
+          <InstaIcon />
+          <LinkedinIcon />
+          <TwitterIcon />
+          <YoutubeIcon />
+        </div>
+      </footer>
     </div>
   );
 }
