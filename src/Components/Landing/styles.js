@@ -202,7 +202,7 @@ const useStyles = makeStyles(
 
     footer: {
       display: 'flex',
-      justifyContent: 'flex-start',
+      justifyContent: 'space-between',
       position: 'relative',
       alignItems: 'center',
       color: '#FFF',
@@ -210,13 +210,21 @@ const useStyles = makeStyles(
       width: '100%',
       backgroundColor: '#352957',
       fontSize: '10px',
+      [theme.breakpoints.down('sm')]: {
+        display: 'flex',
+        width: '100%',
+        position: 'relative',
+        justifyContent: 'flex-start',
+      },
       '& p': {
         marginLeft: '46.5%',
-        // left: '46.5%',
+        [theme.breakpoints.down('sm')]: {
+          marginLeft: 'auto',
+        },
       },
       '& div': {
-        marginLeft: 'auto',
-        marginRight: '20%',
+        marginLeft: '15%',
+        marginRight: 'auto',
         '& svg': {
           marginLeft: '20px',
         },

@@ -1,10 +1,14 @@
 import Landing from "./Components/Landing/Landing";
-import './App.css';
+import "./App.css";
+import { ThemeProvider } from "@material-ui/core/styles";
+import Theme from "./Components/Styles/Theme";
 
 function App() {
   return (
     <>
-    <Landing/>
+      <ThemeProvider theme={Theme}>
+        <Landing />
+      </ThemeProvider>
     </>
   );
 }

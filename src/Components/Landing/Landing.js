@@ -1,3 +1,4 @@
+
 import useStyles from './styles';
 import Signin from '../../Svg/Singin';
 import Login from '../../Svg/Login';
@@ -10,6 +11,7 @@ import YoutubeIcon from '../../Svg/YoutubeIcon';
 import TwitterIcon from '../../Svg/TwitterIcon';
 import LinkedinIcon from '../../Svg/LinkedinIcon';
 import InstaIcon from '../../Svg/InstaIcon';
+
 
 function Landing() {
   const classes = useStyles();
@@ -26,6 +28,7 @@ function Landing() {
         </div>
       </header>
 
+
       <main className={classes.main}>
         <div className={classes.title}>
           <p>
@@ -36,6 +39,7 @@ function Landing() {
             <span className={classes.expose}>expose</span> your work
           </p>
           <div className={classes.titleButton}>
+
             <Button
               variant='contained'
               color='primary'
@@ -45,6 +49,7 @@ function Landing() {
               Sign in
             </Button>
             <Button
+
               variant='outlined'
               color='primary'
               className={classes.titleBtn2}
@@ -54,6 +59,7 @@ function Landing() {
             </Button>
           </div>
         </div>
+
         <div className={classes.image}></div> {/*Just a placeholder for now*/}
         <div className={classes.exploreContent}>
           <Button
