@@ -31,6 +31,7 @@ const useStyles = makeStyles(
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
+        marginRight: '90px',
       },
     },
 
@@ -48,6 +49,9 @@ const useStyles = makeStyles(
         color: '#3F2F6A',
         fontSize: 34,
         margin: '10px 0',
+        [theme.breakpoints.down('sm')]: {
+          fontSize: 28,
+        },
       },
     },
 
@@ -79,6 +83,18 @@ const useStyles = makeStyles(
           height: 20,
           width: 20,
           marginRight: 5,
+        },
+
+        [theme.breakpoints.down('sm')]: {
+          height: 42,
+          width: 120,
+          fontSize: 10,
+          margin: '4px 4px',
+
+          '& svg': {
+            height: 15,
+            width: 15,
+          },
         },
       },
     },
@@ -137,16 +153,29 @@ const useStyles = makeStyles(
       '&:hover': {
         backgroundColor: theme.palette.secondary.main,
       },
+
+      [theme.breakpoints.down('sm')]: {
+        height: 48,
+        width: 190,
+        fontSize: 11.5,
+
+        '& svg': {
+          height: 15,
+          width: 15,
+        },
+      },
     },
 
     cards: {
       padding: '100px 0 200px 0',
       display: 'flex',
       justifyContent: 'space-evenly',
+
       [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        minWidth: 0,
       },
 
       '& div': {
@@ -157,26 +186,43 @@ const useStyles = makeStyles(
         color: '#FFF',
         margin: 3,
         width: 280,
-        minWidth: 280,
         height: 250,
         borderRadius: 16,
+
+        '@media (max-width: 1024px)': {
+          width: 230,
+          height: 230,
+        },
       },
 
       '& svg': {
         margin: '0 auto',
         width: 90,
         height: 90,
+
+        '@media (max-width: 1024px)': {
+          width: 80,
+          height: 80,
+        },
       },
 
       '& p:nth-of-type(1)': {
         marginTop: 0,
         textTransform: 'uppercase',
-        fontSize: '19px',
+        fontSize: 19,
+
+        '@media (max-width: 1024px)': {
+          fontSize: 17,
+        },
       },
 
       '& p:nth-of-type(2), p:nth-of-type(3)': {
         fontFamily: 'Gilroy-Medium, sans-serif',
-        fontSize: '14px',
+        fontSize: 14,
+
+        '@media (max-width: 1024px)': {
+          fontSize: 12,
+        },
       },
 
       '& p:nth-of-type(2)': {
