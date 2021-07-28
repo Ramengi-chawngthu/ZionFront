@@ -87,6 +87,7 @@ function Landing() {
 
       <footer className={classes.footer}>
         <p>&#169; 2021 Zion. All rights reserved</p>
+        <h1>Hello World</h1>
       </footer>
     </div>
   );
