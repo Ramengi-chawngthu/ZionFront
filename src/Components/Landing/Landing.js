@@ -1,10 +1,12 @@
 import useStyles from "./styles";
-import Signin from "../../Svg/Singin";
-import Login from "../../Svg/Login";
-import Fast from "../../Svg/Fast";
-import Simple from "../../Svg/Simple";
-import Expose from "../../Svg/Expose";
-import ExploreContent from "../../Svg/ExploreContent";
+//SVG's
+import Signin from "../../Svg/LandingSvg/Singin";
+import Login from "../../Svg/LandingSvg/Login";
+import Fast from "../../Svg/LandingSvg/Fast";
+import Simple from "../../Svg/LandingSvg/Simple";
+import Expose from "../../Svg/LandingSvg/Expose";
+import ExploreContent from "../../Svg/LandingSvg/ExploreContent";
+//Material UI
 import Button from "@material-ui/core/Button";
 
 function Landing() {
@@ -87,7 +89,6 @@ function Landing() {
 
       <footer className={classes.footer}>
         <p>&#169; 2021 Zion. All rights reserved</p>
-        <h1>Hello World</h1>
       </footer>
     </div>
   );
