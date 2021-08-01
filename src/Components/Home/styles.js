@@ -13,6 +13,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFF",
   },
 
+  container: {
+    position: "relative",
+    height: "100%",
+  },
+
   nav: {
     display: "flex",
     justifyContent: "flex-end",
@@ -95,14 +100,68 @@ const useStyles = makeStyles((theme) => ({
         width: "80%",
 
         "& span": {
-          marginLeft: 12,
+          marginLeft: 20,
         },
 
         "& svg": {
+          overflow: "visible",
           marginLeft: 20,
           width: 20,
           height: 20,
         },
+      },
+    },
+  },
+
+  options2: {
+    paddingTop: 40,
+    "& ul": {
+      paddingLeft: 0,
+      listStyle: "none",
+
+      "& li": {
+        borderRadius: 40,
+        marginLeft: 25,
+        marginBottom: 30,
+        display: "flex",
+        alignItems: "center",
+        fontFamily: "Gilroy-SemiBold, sans-serif",
+        cursor: "pointer",
+        fontSize: 14,
+        lineHeight: 3.5,
+        width: "80%",
+
+        "& span": {
+          marginLeft: 20,
+        },
+
+        "& svg": {
+          overflow: "visible",
+          marginLeft: 20,
+          width: 20,
+          height: 20,
+        },
+      },
+    },
+  },
+
+  footerOptions: {
+    width: "100%",
+    position: "absolute",
+    bottom: 0,
+    fontFamily: "Gilroy-SemiBold, sans-serif",
+    fontSize: 14,
+    display: "flex",
+    justifyContent: "space-evenly",
+
+    "& div": {
+      cursor: "pointer",
+      marginBottom: 50,
+      display: "flex",
+      justifyContent: "center",
+
+      "& span": {
+        marginLeft: 12,
       },
     },
   },
