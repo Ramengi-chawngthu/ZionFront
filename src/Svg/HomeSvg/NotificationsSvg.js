@@ -16,18 +16,18 @@ function NotificationsSvg() {
       <path
         d="M25.8002 29.5V30.3C25.8002 31.2 25.2002 32.1 24.3002 32.2C23.2002 32.4 22.2002 31.5 22.2002 30.4V29.5H25.8002Z"
         stroke="white"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M30.3002 29.5H17.7002C17.2002 29.5 16.7002 29.1 16.7002 28.5V28.3C16.7002 27.7 17.0002 27.1 17.4002 26.7C18.1002 26.1 18.5002 25.3 18.5002 24.4V21.4C18.5002 18.7 20.4002 16.2 23.1002 15.8C25.0002 15.5 26.7002 16.1 27.9002 17.3C28.9002 18.3 29.5002 19.7 29.5002 21.2V24.4C29.5002 25.3 29.9002 26.1 30.6002 26.7C31.1002 27.1 31.3002 27.6 31.3002 28.3V28.5C31.3002 29.1 30.9002 29.5 30.3002 29.5Z"
         stroke="white"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

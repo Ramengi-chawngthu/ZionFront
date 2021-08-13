@@ -31,7 +31,7 @@ function Sidebar() {
     switch (optionSelect) {
       case 1:
         MyProfile.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
-        Following.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
+        Following.current.style.backgroundColor = "#FFF";
         Followers.current.style.backgroundColor = "#FFF";
         Bookmarks.current.style.backgroundColor = "#FFF";
         Clubs.current.style.backgroundColor = "#FFF";
@@ -90,7 +90,7 @@ function Sidebar() {
     <section className={classes.sidebar}>
       <div className={classes.container}>
         <nav className={classes.nav}>
-          <span>Zion</span>
+          <span></span>
           <div className={classes.navIcons}>
             <MessageSvg />
             <NotificationsSvg />
@@ -186,7 +186,7 @@ function Sidebar() {
           </div>
           <div>
             <LogoutSvg />
-            <span>Logout</span>
+            <span className={classes.logout}>Logout</span>
           </div>
         </div>
       </div>

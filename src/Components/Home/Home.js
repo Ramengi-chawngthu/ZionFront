@@ -7,10 +7,7 @@ function Home() {
   return (
     <>
       <Sidebar />
-      <div style={{ marginLeft: "20%" }}>
-        Hello WOrld
-        <BookmarksSvg />
-      </div>
+      <div style={{ marginLeft: "20%" }}></div>
     </>
   );
 }

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={Theme}>
-        <Landing />
+        <Home />
       </ThemeProvider>
     </>
   );

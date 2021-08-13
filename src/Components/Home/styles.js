@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
 
     "& svg": {
       margin: "0 4px",
-      height: 35,
-      width: 35,
+      height: 40,
+      width: 40,
       cursor: "pointer",
     },
   },
@@ -88,26 +88,26 @@ const useStyles = makeStyles((theme) => ({
       listStyle: "none",
 
       "& li": {
-        borderRadius: 40,
+        borderRadius: 5,
         marginLeft: 25,
         marginBottom: 30,
         display: "flex",
         alignItems: "center",
-        fontFamily: "Gilroy-SemiBold, sans-serif",
+        fontFamily: "Lato, sans-serif",
         cursor: "pointer",
-        fontSize: 14,
+        fontSize: 16,
         lineHeight: 3.5,
         width: "80%",
 
         "& span": {
-          marginLeft: 20,
+          marginLeft: 12,
         },
 
         "& svg": {
           overflow: "visible",
           marginLeft: 20,
-          width: 20,
-          height: 20,
+          width: 27,
+          height: 27,
         },
       },
     },
@@ -120,26 +120,26 @@ const useStyles = makeStyles((theme) => ({
       listStyle: "none",
 
       "& li": {
-        borderRadius: 40,
+        borderRadius: 5,
         marginLeft: 25,
         marginBottom: 30,
         display: "flex",
         alignItems: "center",
-        fontFamily: "Gilroy-SemiBold, sans-serif",
+        fontFamily: "Lato, sans-serif",
         cursor: "pointer",
-        fontSize: 14,
+        fontSize: 16,
         lineHeight: 3.5,
         width: "80%",
 
         "& span": {
-          marginLeft: 20,
+          marginLeft: 12,
         },
 
         "& svg": {
           overflow: "visible",
           marginLeft: 20,
-          width: 20,
-          height: 20,
+          width: 27,
+          height: 27,
         },
       },
     },
@@ -149,8 +149,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     position: "absolute",
     bottom: 0,
-    fontFamily: "Gilroy-SemiBold, sans-serif",
-    fontSize: 14,
+    fontFamily: "Lato, sans-serif",
+    fontSize: 16,
     display: "flex",
     justifyContent: "space-evenly",
 
@@ -161,9 +161,16 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
 
       "& span": {
-        marginLeft: 12,
+        textAlign: "center",
+        marginLeft: 5,
+        display: "flex",
+        alignItems: "center",
       },
     },
+  },
+
+  logout: {
+    color: "#FF6B6B",
   },
 }));
 
