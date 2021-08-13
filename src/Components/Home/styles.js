@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 260,
     minWidth: 180,
     height: "100vh",
-    backgroundColor: "#FFF",
+    backgroundColor: "#E7EFFE",
+    borderRadius: "0 40px 40px 0",
   },
 
   container: {
@@ -56,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #7768F2",
 
     "& button": {
+      backgroundColor: "#E7EFFE",
       padding: 0,
       cursor: "pointer",
       position: "absolute",
@@ -63,10 +65,9 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
       transform: "translate(-40%,25%)",
       border: "none",
-      backgroundColor: "#FFF",
       "& svg": {
         cursor: "pointer",
-        backgroundColor: "#FFF",
+        backgroundColor: "#E7EFFE",
       },
     },
   },
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%,-50%)",
     outline: "none",
     border: "none",
+    backgroundColor: "#E7EFFE",
   },
 
   options1: {

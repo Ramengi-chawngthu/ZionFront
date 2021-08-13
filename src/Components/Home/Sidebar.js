@@ -30,55 +30,55 @@ function Sidebar() {
   useEffect(() => {
     switch (optionSelect) {
       case 1:
-        MyProfile.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
-        Following.current.style.backgroundColor = "#FFF";
-        Followers.current.style.backgroundColor = "#FFF";
-        Bookmarks.current.style.backgroundColor = "#FFF";
-        Clubs.current.style.backgroundColor = "#FFF";
-        Stores.current.style.backgroundColor = "#FFF";
+        MyProfile.current.style.backgroundColor = "rgba(15, 16, 236, 0.1)";
+        Following.current.style.backgroundColor = "#E7EFFE";
+        Followers.current.style.backgroundColor = "#E7EFFE";
+        Bookmarks.current.style.backgroundColor = "#E7EFFE";
+        Clubs.current.style.backgroundColor = "#E7EFFE";
+        Stores.current.style.backgroundColor = "#E7EFFE";
         break;
       case 2:
-        Following.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
-        MyProfile.current.style.backgroundColor = "#FFF";
-        Followers.current.style.backgroundColor = "#FFF";
-        Bookmarks.current.style.backgroundColor = "#FFF";
-        Clubs.current.style.backgroundColor = "#FFF";
-        Stores.current.style.backgroundColor = "#FFF";
+        Following.current.style.backgroundColor = "rgba(15, 16, 236, 0.1)";
+        MyProfile.current.style.backgroundColor = "#E7EFFE";
+        Followers.current.style.backgroundColor = "#E7EFFE";
+        Bookmarks.current.style.backgroundColor = "#E7EFFE";
+        Clubs.current.style.backgroundColor = "#E7EFFE";
+        Stores.current.style.backgroundColor = "#E7EFFE";
         break;
       case 3:
-        Followers.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
-        MyProfile.current.style.backgroundColor = "#FFF";
-        Following.current.style.backgroundColor = "#FFF";
-        Bookmarks.current.style.backgroundColor = "#FFF";
-        Clubs.current.style.backgroundColor = "#FFF";
-        Stores.current.style.backgroundColor = "#FFF";
+        Followers.current.style.backgroundColor = "rgba(15, 16, 236, 0.1)";
+        MyProfile.current.style.backgroundColor = "#E7EFFE";
+        Following.current.style.backgroundColor = "#E7EFFE";
+        Bookmarks.current.style.backgroundColor = "#E7EFFE";
+        Clubs.current.style.backgroundColor = "#E7EFFE";
+        Stores.current.style.backgroundColor = "#E7EFFE";
         break;
 
       case 4:
-        Bookmarks.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
-        MyProfile.current.style.backgroundColor = "#FFF";
-        Following.current.style.backgroundColor = "#FFF";
-        Followers.current.style.backgroundColor = "#FFF";
-        Clubs.current.style.backgroundColor = "#FFF";
-        Stores.current.style.backgroundColor = "#FFF";
+        Bookmarks.current.style.backgroundColor = "rgba(15, 16, 236, 0.1)";
+        MyProfile.current.style.backgroundColor = "#E7EFFE";
+        Following.current.style.backgroundColor = "#E7EFFE";
+        Followers.current.style.backgroundColor = "#E7EFFE";
+        Clubs.current.style.backgroundColor = "#E7EFFE";
+        Stores.current.style.backgroundColor = "#E7EFFE";
         break;
 
       case 5:
-        MyProfile.current.style.backgroundColor = "#FFF";
-        Following.current.style.backgroundColor = "#FFF";
-        Followers.current.style.backgroundColor = "#FFF";
-        Bookmarks.current.style.backgroundColor = "#FFF";
-        Clubs.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
-        Stores.current.style.backgroundColor = "#FFF";
+        MyProfile.current.style.backgroundColor = "#E7EFFE";
+        Following.current.style.backgroundColor = "#E7EFFE";
+        Followers.current.style.backgroundColor = "#E7EFFE";
+        Bookmarks.current.style.backgroundColor = "#E7EFFE";
+        Clubs.current.style.backgroundColor = "rgba(15, 16, 236, 0.1)";
+        Stores.current.style.backgroundColor = "#E7EFFE";
         break;
 
       case 6:
-        MyProfile.current.style.backgroundColor = "#FFF";
-        Following.current.style.backgroundColor = "#FFF";
-        Followers.current.style.backgroundColor = "#FFF";
-        Bookmarks.current.style.backgroundColor = "#FFF";
-        Clubs.current.style.backgroundColor = "#FFF";
-        Stores.current.style.backgroundColor = "rgba(119, 104, 242, 0.05)";
+        MyProfile.current.style.backgroundColor = "#E7EFFE";
+        Following.current.style.backgroundColor = "#E7EFFE";
+        Followers.current.style.backgroundColor = "#E7EFFE";
+        Bookmarks.current.style.backgroundColor = "#E7EFFE";
+        Clubs.current.style.backgroundColor = "#E7EFFE";
+        Stores.current.style.backgroundColor = "rgba(15, 16, 236, 0.1)";
         break;
 
       default:
