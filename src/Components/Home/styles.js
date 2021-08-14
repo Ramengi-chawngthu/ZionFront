@@ -10,7 +10,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 260,
     minWidth: 180,
     height: "100vh",
-    backgroundColor: "#E7EFFE",
+    backgroundColor: "rgba( 255, 255, 255, 0.25 )",
+    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.15 )",
+    backdropFilter: "blur( 8.5px )",
     borderRadius: "0 40px 40px 0",
   },
 
@@ -57,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #7768F2",
 
     "& button": {
-      backgroundColor: "#E7EFFE",
+      backgroundColor: "rgba( 255, 255, 255, 0.25 )",
       padding: 0,
       cursor: "pointer",
       position: "absolute",
@@ -67,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       border: "none",
       "& svg": {
         cursor: "pointer",
-        backgroundColor: "#E7EFFE",
+        backgroundColor: "rgba( 255, 255, 255, 0.25 )",
       },
     },
   },
@@ -81,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%,-50%)",
     outline: "none",
     border: "none",
-    backgroundColor: "#E7EFFE",
+    backgroundColor: "rgba( 255, 255, 255, 0.25 )",
   },
 
   options1: {
@@ -90,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
       listStyle: "none",
 
       "& li": {
-        borderRadius: 5,
+        borderRadius: 10,
         marginLeft: 25,
         marginBottom: 30,
         display: "flex",
