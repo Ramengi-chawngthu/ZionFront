@@ -4,16 +4,19 @@ const useStyles = makeStyles((theme) => ({
   sidebar: {
     color: theme.palette.primary.main,
     position: "fixed",
-    top: 0,
+    top: 5,
     left: 0,
     width: "20%",
-    maxWidth: 260,
+    maxWidth: 300,
     minWidth: 180,
-    height: "100vh",
+    height: "99vh",
+    minHeight: 900,
+    border: "1px solid #7768f28a",
     backgroundColor: "rgba( 255, 255, 255, 0.25 )",
     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.15 )",
     backdropFilter: "blur( 8.5px )",
-    borderRadius: "0 40px 40px 0",
+    borderRadius: 20,
+    marginLeft: 5,
   },
 
   container: {
@@ -175,6 +178,149 @@ const useStyles = makeStyles((theme) => ({
 
   logout: {
     color: "#FF6B6B",
+  },
+
+  // End of sidebar
+
+  main: {
+    marginLeft: "25%",
+    maxWidth: 1200,
+
+    "@media (max-width:1660px)": {
+      width: "60%",
+      marginLeft: "30%",
+    },
+  },
+
+  header: {
+    margin: "0 auto",
+    height: 120,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+
+    "& h1": {
+      fontSize: 28,
+      margin: 0,
+      color: "#3F2F6A",
+      fontFamily: "Gilroy-SemiBold, Lato",
+    },
+  },
+
+  headerButton: {
+    padding: "0 20px",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: theme.palette.primary.main,
+    height: 45,
+    width: 120,
+    borderRadius: 40,
+    border: 0,
+    "& h1": {
+      fontSize: 17,
+      textTransform: "capitalize",
+      fontFamily: "Gilroy-Reg, sans-serif",
+      color: "#FFF",
+    },
+  },
+
+  gridMain: {
+    textAlign: "center",
+    "&>:nth-child(1n)": {
+      display: "flex",
+      flexDirection: "column",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      "&>:nth-child(3n+1)": {
+        alignItems: "flex-start",
+      },
+
+      "&>:nth-child(3n+2)": {
+        alignItems: "center",
+      },
+
+      "&>:nth-child(3n)": {
+        alignItems: "flex-end",
+      },
+    },
+
+    [theme.breakpoints.between("sm", "md")]: {
+      "&>:nth-child(2n+1)": {
+        alignItems: "flex-start",
+      },
+
+      "&>:nth-child(2n+2)": {
+        alignItems: "flex-end",
+      },
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      "&>:nth-child(1n)": {
+        alignItems: "center",
+      },
+    },
+  },
+
+  cardItems: {
+    textAlign: "center",
+  },
+
+  cardImg: {
+    height: 200,
+    marginTop: 20,
+    backgroundColor: "#CCC",
+    borderRadius: 15,
+    maxWidth: 320,
+    minWidth: 250,
+    width: "90%",
+
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 320,
+      minWidth: 250,
+      width: "90%",
+    },
+
+    [theme.breakpoints.between("sm", "md")]: {
+      maxWidth: 320,
+      minWidth: 220,
+      width: "90%",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 320,
+      minWidth: 240,
+      width: "90%",
+    },
+  },
+
+  cardInfo: {
+    height: 60,
+    backgroundColor: "#CCA",
+    marginTop: 10,
+    maxWidth: 320,
+    minWidth: 250,
+    width: "90%",
+
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 320,
+      minWidth: 250,
+      width: "90%",
+    },
+
+    [theme.breakpoints.between("sm", "md")]: {
+      maxWidth: 320,
+      minWidth: 220,
+      width: "90%",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 320,
+      minWidth: 240,
+      width: "90%",
+    },
   },
 }));
 
