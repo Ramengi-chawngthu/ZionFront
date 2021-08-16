@@ -227,13 +227,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   gridMain: {
+    display: "grid",
     textAlign: "center",
-    "&>:nth-child(1n)": {
+    "&>:nth-child(1n + 1)": {
       display: "flex",
       flexDirection: "column",
     },
 
     [theme.breakpoints.up("lg")]: {
+      gridTemplateColumns: "1fr 1fr 1fr",
       "&>:nth-child(3n+1)": {
         alignItems: "flex-start",
       },
@@ -248,6 +250,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.between("sm", "md")]: {
+      gridTemplateColumns: "1fr 1fr",
       "&>:nth-child(2n+1)": {
         alignItems: "flex-start",
       },
@@ -258,6 +261,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down("sm")]: {
+      gridTemplateColumns: "1fr",
       "&>:nth-child(1n)": {
         alignItems: "center",
       },
