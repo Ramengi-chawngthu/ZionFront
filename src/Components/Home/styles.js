@@ -5,8 +5,9 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     position: "fixed",
     top: 5,
-    left: 0,
-    width: "20%",
+    left: 7,
+    bottom: 0,
+    width: 260,
     maxWidth: 300,
     minWidth: 180,
     height: "99vh",
@@ -16,12 +17,13 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.15 )",
     backdropFilter: "blur( 8.5px )",
     borderRadius: 20,
-    marginLeft: 5,
   },
 
   container: {
     position: "relative",
     height: "100%",
+    display: "flex",
+    flexDirection: "column",
   },
 
   nav: {
@@ -154,12 +156,11 @@ const useStyles = makeStyles((theme) => ({
 
   footerOptions: {
     width: "100%",
-    position: "absolute",
-    bottom: 0,
     fontFamily: "Lato, sans-serif",
     fontSize: 16,
     display: "flex",
     justifyContent: "space-evenly",
+    marginTop: "auto",
 
     "& div": {
       cursor: "pointer",
