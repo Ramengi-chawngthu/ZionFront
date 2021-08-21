@@ -11,13 +11,17 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 300,
     minWidth: 180,
     height: "99vh",
-    overflow: 'auto',
+    overflow: "auto",
     border: "1px solid #7768f28a",
     backgroundColor: "rgba( 255, 255, 255, 0.25 )",
     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.15 )",
     backdropFilter: "blur( 8.5px )",
     borderRadius: 20,
     "-webkit-backdrop-filter": "blur( 8.5px )",
+
+    "@media (max-width:1220px)": {
+      width: "230px",
+    },
   },
 
   container: {
@@ -161,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 16,
     display: "flex",
     justifyContent: "space-evenly",
-    marginTop: "auto",
+    marginTop: "30%",
 
     "& div": {
       cursor: "pointer",
@@ -191,6 +195,10 @@ const useStyles = makeStyles((theme) => ({
     "@media (max-width:1660px)": {
       width: "60%",
       marginLeft: "30%",
+    },
+
+    "@media (max-width:1220px)": {
+      marginLeft: "33%",
     },
   },
 
