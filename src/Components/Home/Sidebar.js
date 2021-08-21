@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import useStyles from "./styles";
+import SimpleBarReact from "simplebar-react";
+import "simplebar/src/simplebar.css";
+
 
 import MessageSvg from "../../Svg/HomeSvg/MessageSvg";
 import NotificationsSvg from "../../Svg/HomeSvg/NotificationsSvg";
@@ -87,7 +90,8 @@ function Sidebar() {
   }, [optionSelect]);
 
   return (
-    <section className={classes.sidebar}>
+    
+    <SimpleBarReact className={classes.sidebar}>
       <div className={classes.container}>
         <nav className={classes.nav}>
           <span></span>
@@ -190,7 +194,8 @@ function Sidebar() {
           </div>
         </div>
       </div>
-    </section>
+    </SimpleBarReact>
+
   );
 }
 

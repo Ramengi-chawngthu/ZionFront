@@ -11,12 +11,13 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 300,
     minWidth: 180,
     height: "99vh",
-    minHeight: 900,
+    overflow: 'auto',
     border: "1px solid #7768f28a",
     backgroundColor: "rgba( 255, 255, 255, 0.25 )",
     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.15 )",
     backdropFilter: "blur( 8.5px )",
     borderRadius: 20,
+    "-webkit-backdrop-filter": "blur( 8.5px )",
   },
 
   container: {
