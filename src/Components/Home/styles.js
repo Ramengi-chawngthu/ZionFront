@@ -4,13 +4,31 @@ const useStyles = makeStyles((theme) => ({
   sidebar: {
     color: theme.palette.primary.main,
     position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '20%',
-    maxWidth: 260,
+    top: 5,
+    left: 7,
+    bottom: 0,
+    width: 260,
+    maxWidth: 300,
     minWidth: 180,
-    height: '100vh',
-    backgroundColor: '#FFF',
+    height: '99vh',
+    overflow: 'auto',
+    border: '1px solid #7768f28a',
+    backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
+    boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.15 )',
+    backdropFilter: 'blur( 8.5px )',
+    borderRadius: 20,
+    '-webkit-backdrop-filter': 'blur( 8.5px )',
+
+    '@media (max-width:1220px)': {
+      width: '230px',
+    },
+  },
+
+  container: {
+    position: 'relative',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
   },
 
   nav: {
@@ -26,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
 
     '& svg': {
       margin: '0 4px',
-      height: 35,
-      width: 35,
+      height: 40,
+      width: 40,
       cursor: 'pointer',
     },
   },
@@ -51,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #7768F2',
 
     '& button': {
+      backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
       padding: 0,
       cursor: 'pointer',
       position: 'absolute',
@@ -58,10 +77,9 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
       transform: 'translate(-40%,25%)',
       border: 'none',
-      backgroundColor: '#FFF',
       '& svg': {
         cursor: 'pointer',
-        backgroundColor: '#FFF',
+        backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
       },
     },
   },
@@ -75,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%,-50%)',
     outline: 'none',
     border: 'none',
+    backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
   },
 
   options1: {
@@ -83,29 +102,245 @@ const useStyles = makeStyles((theme) => ({
       listStyle: 'none',
 
       '& li': {
-        borderRadius: '40px 0 0 40px',
-        marginLeft: 'auto',
-        marginRight: 0,
+        borderRadius: 10,
+        marginLeft: 25,
         marginBottom: 30,
         display: 'flex',
         alignItems: 'center',
-        fontFamily: 'Gilroy-SemiBold, sans-serif',
+        fontFamily: 'Lato, sans-serif',
         cursor: 'pointer',
-        fontSize: 14,
+        fontSize: 16,
         lineHeight: 3.5,
         width: '80%',
 
         '& span': {
-          // marginLeft: 12,
+          marginLeft: 12,
         },
 
         '& svg': {
-          marginLeft: 12,
-          marginRight: 12,
-          width: 24,
-          height: 24,
+          overflow: 'visible',
+          marginLeft: 20,
+          width: 27,
+          height: 27,
         },
       },
+    },
+  },
+
+  options2: {
+    paddingTop: 40,
+    '& ul': {
+      paddingLeft: 0,
+      listStyle: 'none',
+
+      '& li': {
+        borderRadius: 5,
+        marginLeft: 25,
+        marginBottom: 30,
+        display: 'flex',
+        alignItems: 'center',
+        fontFamily: 'Lato, sans-serif',
+        cursor: 'pointer',
+        fontSize: 16,
+        lineHeight: 3.5,
+        width: '80%',
+
+        '& span': {
+          marginLeft: 12,
+        },
+
+        '& svg': {
+          overflow: 'visible',
+          marginLeft: 20,
+          width: 27,
+          height: 27,
+        },
+      },
+    },
+  },
+
+  footerOptions: {
+    width: '100%',
+    fontFamily: 'Lato, sans-serif',
+    fontSize: 16,
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    marginTop: '30%',
+
+    '& div': {
+      cursor: 'pointer',
+      marginBottom: 50,
+      display: 'flex',
+      justifyContent: 'center',
+
+      '& span': {
+        textAlign: 'center',
+        marginLeft: 5,
+        display: 'flex',
+        alignItems: 'center',
+      },
+    },
+  },
+
+  logout: {
+    color: '#FF6B6B',
+  },
+
+  // End of sidebar
+
+  main: {
+    marginLeft: '25%',
+    maxWidth: 1200,
+
+    '@media (max-width:1660px)': {
+      width: '60%',
+      marginLeft: '30%',
+    },
+
+    '@media (max-width:1220px)': {
+      marginLeft: '33%',
+    },
+  },
+
+  header: {
+    margin: '0 auto',
+    height: 120,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 0,
+      marginLeft: 42,
+    },
+
+    '& h1': {
+      fontSize: 28,
+      margin: 0,
+      color: '#3F2F6A',
+      fontFamily: 'Gilroy-SemiBold, Lato',
+    },
+  },
+
+  headerButton: {
+    padding: '0 20px',
+    cursor: 'pointer',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: theme.palette.primary.main,
+    height: 45,
+    width: 120,
+    borderRadius: 40,
+    border: 0,
+    '& h1': {
+      fontSize: 17,
+      textTransform: 'capitalize',
+      fontFamily: 'Gilroy-Reg, sans-serif',
+      color: '#FFF',
+    },
+  },
+
+  gridMain: {
+    display: 'grid',
+    textAlign: 'center',
+    '&>:nth-child(1n + 1)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+
+    [theme.breakpoints.up('lg')]: {
+      gridTemplateColumns: '1fr 1fr 1fr',
+      '&>:nth-child(3n+1)': {
+        alignItems: 'flex-start',
+      },
+
+      '&>:nth-child(3n+2)': {
+        alignItems: 'center',
+      },
+
+      '&>:nth-child(3n)': {
+        alignItems: 'flex-end',
+      },
+    },
+
+    [theme.breakpoints.between('sm', 'md')]: {
+      gridTemplateColumns: '1fr 1fr',
+      '&>:nth-child(2n+1)': {
+        alignItems: 'flex-start',
+      },
+
+      '&>:nth-child(2n+2)': {
+        alignItems: 'flex-end',
+      },
+    },
+
+    [theme.breakpoints.down('sm')]: {
+      gridTemplateColumns: '1fr',
+      '&>:nth-child(1n)': {
+        alignItems: 'center',
+      },
+    },
+  },
+
+  cardItems: {
+    textAlign: 'center',
+  },
+
+  cardImg: {
+    height: 200,
+    marginTop: 20,
+    backgroundColor: '#CCC',
+    borderRadius: 15,
+    maxWidth: 320,
+    minWidth: 250,
+    width: '90%',
+
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: 320,
+      minWidth: 250,
+      width: '90%',
+    },
+
+    [theme.breakpoints.between('sm', 'md')]: {
+      maxWidth: 320,
+      minWidth: 220,
+      width: '90%',
+    },
+
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 320,
+      minWidth: 240,
+      width: '90%',
+      marginLeft: 42,
+    },
+  },
+
+  cardInfo: {
+    height: 60,
+    backgroundColor: '#CCA',
+    marginTop: 10,
+    maxWidth: 320,
+    minWidth: 250,
+    width: '90%',
+
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: 320,
+      minWidth: 250,
+      width: '90%',
+    },
+
+    [theme.breakpoints.between('sm', 'md')]: {
+      maxWidth: 320,
+      minWidth: 220,
+      width: '90%',
+    },
+
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 320,
+      minWidth: 240,
+      width: '90%',
+      marginLeft: 42,
     },
   },
 }));

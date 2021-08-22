@@ -1,13 +1,16 @@
-import useStyles from "./styles";
+import useStyles from './styles';
 //SVG's
-import Signin from "../../Svg/LandingSvg/Singin";
-import Login from "../../Svg/LandingSvg/Login";
-import Fast from "../../Svg/LandingSvg/Fast";
-import Simple from "../../Svg/LandingSvg/Simple";
-import Expose from "../../Svg/LandingSvg/Expose";
-import ExploreContent from "../../Svg/LandingSvg/ExploreContent";
+import Signin from '../../Svg/LandingSvg/Singin';
+import Login from '../../Svg/LandingSvg/Login';
+import Fast from '../../Svg/LandingSvg/Fast';
+import Simple from '../../Svg/LandingSvg/Simple';
+import Expose from '../../Svg/LandingSvg/Expose';
+import ExploreContent from '../../Svg/LandingSvg/ExploreContent';
+
+import { Link, Redirect } from 'react-router-dom';
+
 //Material UI
-import Button from "@material-ui/core/Button";
+import Button from '@material-ui/core/Button';
 
 function Landing() {
   const classes = useStyles();
@@ -17,7 +20,9 @@ function Landing() {
         <div className={classes.nav}>
           <span>Zion</span>
           <ul>
-            <li>Home</li>
+            <Link to='/home'>
+              <li>Home</li>
+            </Link>
             <li>Contact</li>
             <li>About Us</li>
           </ul>
@@ -35,16 +40,16 @@ function Landing() {
           </p>
           <div className={classes.titleButton}>
             <Button
-              variant="contained"
-              color="primary"
+              variant='contained'
+              color='primary'
               className={classes.titleBtn1}
             >
               <Signin />
               Sign in
             </Button>
             <Button
-              variant="outlined"
-              color="primary"
+              variant='outlined'
+              color='primary'
               className={classes.titleBtn2}
             >
               <Login />
@@ -55,8 +60,8 @@ function Landing() {
         <div className={classes.image}></div> {/*Just a placeholder for now*/}
         <div className={classes.exploreContent}>
           <Button
-            variant="contained"
-            color="secondary"
+            variant='contained'
+            color='secondary'
             className={classes.exploreBtn}
           >
             Explore Content
