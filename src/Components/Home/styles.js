@@ -217,6 +217,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+  mainNavbar: {
+    display: "none",
+  },
+
   headerButton: {
     padding: "0 20px",
     cursor: "pointer",
@@ -334,6 +338,68 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 320,
       minWidth: 240,
       width: "90%",
+    },
+  },
+
+  "@media (max-width: 960px)": {
+    sidebar: {
+      display: "none",
+    },
+
+    main: {
+      margin: "0 auto",
+    },
+
+    header: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      margin: "0 auto",
+      marginBottom: 60,
+
+      "& >:nth-child(2)": {
+        fontSize: 20,
+        padding: 5,
+        marginTop: 20,
+      },
+    },
+
+    mainNavbar: {
+      width: "100%",
+      display: "block",
+    },
+
+    mainNavbarContainer: {
+      width: "90%",
+      maxWidth: 320,
+      minWidth: 240,
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      margin: "0 auto",
+    },
+
+    mainNavbarBurger: {
+      cursor: "pointer",
+    },
+
+    headerButton: {
+      padding: "10px 20px",
+      marginTop: 10,
+    },
+
+    mainNavbarIcons: {
+      "& svg": {
+        width: 35,
+        paddingTop: "5px",
+        marginLeft: 10,
+        cursor: "pointer",
+      },
+    },
+
+    gridMain: {
+      minWidth: 0,
+      paddingBottom: 30,
     },
   },
 }));
