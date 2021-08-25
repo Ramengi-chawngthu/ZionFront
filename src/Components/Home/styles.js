@@ -289,7 +289,7 @@ const useStyles = makeStyles((theme) => ({
   cardImg: {
     height: 200,
     marginTop: 20,
-    borderRadius: 15,
+    borderRadius: 8,
     overflow: "hidden",
     maxWidth: 320,
     minWidth: 250,
