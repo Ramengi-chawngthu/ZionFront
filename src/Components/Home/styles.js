@@ -348,6 +348,7 @@ const useStyles = makeStyles((theme) => ({
 
     main: {
       margin: "0 auto",
+      width: "90%",
     },
 
     header: {
@@ -400,6 +401,14 @@ const useStyles = makeStyles((theme) => ({
     gridMain: {
       minWidth: 0,
       paddingBottom: 30,
+    },
+
+    cardImg: {
+      minWidth: 200,
+    },
+
+    cardInfo: {
+      minWidth: 200,
     },
   },
 }));
