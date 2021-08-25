@@ -289,8 +289,8 @@ const useStyles = makeStyles((theme) => ({
   cardImg: {
     height: 200,
     marginTop: 20,
-    backgroundColor: "#CCC",
     borderRadius: 15,
+    overflow: "hidden",
     maxWidth: 320,
     minWidth: 250,
     width: "90%",
