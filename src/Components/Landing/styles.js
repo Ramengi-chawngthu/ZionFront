@@ -106,6 +106,10 @@ const useStyles = makeStyles(
       "&:hover": {
         backgroundColor: theme.palette.primary.main,
       },
+
+      "& span": {
+        height: "inherit",
+      },
     },
 
     titleBtn2: {
