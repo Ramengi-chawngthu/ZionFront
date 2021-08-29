@@ -2,9 +2,7 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import Main from './Main';
 
-// import BookmarksSvg from "../../Svg/HomeSvg/BookmarksSvg";
-
-function Home() {
+function MyProfile() {
   return (
     <>
       <Sidebar />
@@ -13,4 +11,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default MyProfile;

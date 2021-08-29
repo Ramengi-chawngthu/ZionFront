@@ -39,6 +39,7 @@ function Sidebar() {
         Bookmarks.current.style.backgroundColor = 'rgba( 255, 255, 255, 0.25 )';
         Clubs.current.style.backgroundColor = 'rgba( 255, 255, 255, 0.25 )';
         Stores.current.style.backgroundColor = 'rgba( 255, 255, 255, 0.25 )';
+
         break;
       case 2:
         Following.current.style.backgroundColor = 'rgba(15, 16, 236, 0.1)';
@@ -120,7 +121,7 @@ function Sidebar() {
 
         <div className={classes.options1}>
           <ul>
-            <Link to='MyProfile' className={classes.profile}>
+            <Link to='MyProfile ' className={classes.profile}>
               <li
                 onClick={() => {
                   handleOptionSelect(1);

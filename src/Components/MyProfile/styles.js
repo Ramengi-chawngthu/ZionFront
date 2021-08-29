@@ -1,4 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
+import Wall from '../../Images/Wall.png';
+import Wallbig from '../../Images/Wallbig.png';
 
 const useStyles = makeStyles((theme) => ({
   sidebar: {
@@ -187,9 +189,217 @@ const useStyles = makeStyles((theme) => ({
   },
 
   // End of sidebar
+  //start of Profile page mains
+  proname: {
+    // marginLeft: '360px',
+    '& h1': {
+      fontSize: 28,
+      margin: 0,
+      color: '#3F2F6A',
+      fontFamily: 'Gilroy-SemiBold, Lato',
+    },
+  },
+  procard: {
+    backgroundImage: `url(${Wall})`,
+    backgroundSize: 'fill',
+    backgroundRepeat: 'no-repeat',
+    // margin: 28.4,
+    marginTop: 50,
+    marginLeft: '10%',
+    height: 350,
+    width: 1100,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: 20,
+  },
+  description: {
+    height: '55%',
+    width: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: '20px 20px 0px 0px',
+  },
+  profc: { display: 'flex', flexDirection: 'column' },
+  profr: {
+    // width: '100vw',
+    display: 'flex',
+    flexDirection: 'row',
+    alignContent: 'center',
+    marginTop: 25,
+  },
+  propic: {
+    width: 200,
+    height: 200,
+    borderRadius: '50%',
+    backgroundColor: '#000000',
+  },
+  flexr1: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 15,
+  },
+  flexr2: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 25,
+    '& button': {
+      textTransform: 'none',
+      boxSizing: 'border-box',
+      margin: '0 5px',
+      height: 48,
+      width: 130,
+      borderRadius: 48,
+      fontSize: 12,
+      letterSpacing: 1,
+      fontFamily: 'Gilroy-Bold, sans-serif',
+      lineHeight: 20,
+      cursor: 'pointer',
 
+      '& svg': {
+        height: 20,
+        width: 20,
+        marginRight: 5,
+      },
+    },
+  },
+  aligner: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignContent: 'center',
+  },
+  optionbar: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 40,
+
+    alignItems: 'center',
+    // width: '50%',
+    '& button': {
+      marginTop: 20,
+      textTransform: 'none',
+      boxSizing: 'border-box',
+      margin: '0 5px',
+      height: 48,
+      width: 130,
+      borderRadius: 48,
+      fontSize: 12,
+      letterSpacing: 1,
+      fontFamily: 'Gilroy-Bold, sans-serif',
+      lineHeight: 20,
+      cursor: 'pointer',
+
+      '& svg': {
+        height: 20,
+        width: 20,
+        marginRight: 5,
+      },
+    },
+  },
+  scbutton: {
+    '& button': {
+      // marginTop: 20,
+      textTransform: 'none',
+      boxSizing: 'border-box',
+      margin: '0 5px',
+      height: 48,
+      width: 130,
+      borderRadius: 48,
+      fontSize: 12,
+      letterSpacing: 1,
+      fontFamily: 'Gilroy-Bold, sans-serif',
+      lineHeight: 20,
+      cursor: 'pointer',
+
+      '& svg': {
+        height: 20,
+        width: 20,
+        marginRight: 5,
+      },
+    },
+  },
+  flexr3: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginLeft: 20,
+    color: 'white',
+    marginBottom: 35,
+  },
+  flexr4: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 20,
+    color: 'white',
+    marginBottom: 35,
+  },
+  mr1: {
+    marginRight: 20,
+    marginBottom: 20,
+  },
+  flexalign: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 40,
+    color: 'white',
+    '& svg': {
+      marginRight: 8,
+    },
+  },
+  storeno: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+  socialmediarow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    width: 130,
+  },
+  shopcard: {
+    backgroundImage: `url(${Wallbig})`,
+    // backgroundSize: 'fit',
+    backgroundRepeat: 'no-repeat',
+    marginTop: 50,
+    height: 420,
+    width: 1200,
+    borderRadius: 40,
+  },
+  shopcardbord: { padding: 70 },
+  shopcardname: {
+    marginLeft: 20,
+    fontSize: 18,
+    letterSpacing: 1,
+    fontFamily: 'Gilroy-Bold, sans-serif',
+    // lineHeight: 20,
+    marginTop: '2%',
+    color: 'white',
+  },
+  shopcarddescrip: {
+    marginLeft: 20,
+    marginBottom: 15,
+    fontSize: 14,
+    letterSpacing: 1,
+    fontFamily: 'Gilroy-Bold, sans-serif',
+    // lineHeight: 20,
+    marginTop: '2%',
+    color: 'white',
+  },
+  flexc: {
+    display: 'flex',
+    flexDirection: 'column',
+    // justifyContent: 'flex-start',
+  },
   main: {
-    marginLeft: '25%',
+    marginLeft: '20%',
     maxWidth: 1200,
 
     '@media (max-width:1660px)': {
@@ -216,14 +426,15 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Gilroy-SemiBold, Lato',
     },
   },
-
-  mainNavbar: {
-    display: 'none',
-  },
   profile: {
     textDecoration: 'none',
     color: 'inherit',
   },
+
+  mainNavbar: {
+    display: 'none',
+  },
+
   headerButton: {
     padding: '0 20px',
     cursor: 'pointer',

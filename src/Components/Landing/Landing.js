@@ -7,7 +7,7 @@ import Simple from '../../Svg/LandingSvg/Simple';
 import Expose from '../../Svg/LandingSvg/Expose';
 import ExploreContent from '../../Svg/LandingSvg/ExploreContent';
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //Material UI
 import Button from '@material-ui/core/Button';
@@ -20,7 +20,7 @@ function Landing() {
         <div className={classes.nav}>
           <span>Zion</span>
           <ul>
-            <Link to='/home'>
+            <Link to='/home' className={classes.home}>
               <li>Home</li>
             </Link>
             <li>Contact</li>
