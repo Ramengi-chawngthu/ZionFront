@@ -1,8 +1,8 @@
-import React from "react";
-import Sidebar from "./Sidebar";
-import Main from "./Main";
+import React from 'react';
+import Sidebar from '../Sidebar/Sidebar';
+import Main from './Main';
 
-import BookmarksSvg from "../../Svg/HomeSvg/BookmarksSvg";
+import BookmarksSvg from '../../Svg/HomeSvg/BookmarksSvg';
 
 function Home() {
   return (

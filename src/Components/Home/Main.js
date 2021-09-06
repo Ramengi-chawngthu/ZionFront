@@ -1,54 +1,30 @@
-import React, { useState, useEffect } from "react";
-import useStyles from "./styles";
+import React, { useState, useEffect, useContext } from 'react';
+import useStyles from './styles';
+import SidebarContext from '../Context/SidebarContext';
 
-import Burger from "./Burger";
-import Cards from "./Cards";
-import Filter from "../../Svg/HomeSvg/FilterSvg";
-import MessageSvg from "../../Svg/HomeSvg/MessageSvg";
-import NotificationsSvg from "../../Svg/HomeSvg/NotificationsSvg";
+import Burger from './Burger';
+import Cards from './Cards';
+import Filter from '../../Svg/HomeSvg/FilterSvg';
+import HomeBurger from './HomeBurger';
 
 function Main() {
-  const [toggleSidebar, SettoggleSidebar] = useState(false);
-  useEffect(() => {
-    console.log(toggleSidebar);
-  }, [toggleSidebar]);
+  const { isSidebar, setIsSidebar } = useContext(SidebarContext);
   const classes = useStyles();
+  const HandleClick = () => {
+    setIsSidebar(true);
+  };
+  console.log(isSidebar);
+
   return (
     <>
       <div className={classes.main}>
-        {toggleSidebar && (
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <div
-              onClick={() => {
-                SettoggleSidebar((val) => !val);
-              }}
-            >
-              <Burger />
-            </div>
+        <div className={classes.navigation}>
+          <HomeBurger click={HandleClick} />
+          <h1>Zion</h1>
+        </div>
 
-            <p>To be implemented later</p>
-          </div>
-        )}
         <header className={classes.header}>
-          <div className={classes.mainNavbar}>
-            <div className={classes.mainNavbarContainer}>
-              <div
-                className={classes.mainNavbarBurger}
-                onClick={() => {
-                  SettoggleSidebar((val) => !val);
-                }}
-              >
-                <Burger />
-              </div>
-              <div className={classes.mainNavbarIcons}>
-                <MessageSvg />
-                <NotificationsSvg />
-              </div>
-            </div>
-          </div>
-
           <h1>All Categories</h1>
-
           <button className={classes.headerButton}>
             <h1>Filter</h1>
             <Filter />
