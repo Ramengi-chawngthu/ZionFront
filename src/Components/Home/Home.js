@@ -1,8 +1,6 @@
-import React from 'react';
-import Sidebar from '../Sidebar/Sidebar';
-import Main from './Main';
-
-import BookmarksSvg from '../../Svg/HomeSvg/BookmarksSvg';
+import React from "react";
+import Sidebar from "../Sidebar/Sidebar";
+import Main from "./Main";
 
 function Home() {
   return (

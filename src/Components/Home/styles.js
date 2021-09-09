@@ -87,12 +87,12 @@ const useStyles = makeStyles((theme) => ({
       },
     },
 
-    [theme.breakpoints.down("sm")]: {
-      gridTemplateColumns: "1fr",
-      "&>:nth-child(1n)": {
-        alignItems: "center",
-      },
-    },
+    // [theme.breakpoints.down("sm")]: {
+    //   gridTemplateColumns: "1fr",
+    //   "&>:nth-child(1n)": {
+    //     alignItems: "center",
+    //   },
+    // },
   },
 
   cardItems: {
@@ -200,14 +200,14 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "flex-start",
       alignItems: "center",
-      maxWidth: 320,
-      minWidth: 240,
-      margin: "0 auto",
+      width: "100%",
+      margin: "0",
       marginTop: 30,
 
       "& h1": {
-        marginLeft: 120,
-        transform: "translateX(-45%)",
+        marginLeft: "auto",
+        marginRight: "auto",
+        transform: "translateX(-50%)",
         fontFamily: "Gilroy-Reg, sans-serif",
         fontSize: 28,
       },
@@ -219,7 +219,9 @@ const useStyles = makeStyles((theme) => ({
 
     header: {
       height: 80,
-      maxWidth: 320,
+      width: "100%",
+      margin: 0,
+      marginBottom: 30,
       alignItems: "flex-end",
 
       "& >:nth-child(1)": {
@@ -244,6 +246,33 @@ const useStyles = makeStyles((theme) => ({
     gridMain: {
       minWidth: 0,
       paddingBottom: 30,
+    },
+  },
+
+  "@media screen and (max-width: 700px)": {
+    navigation: {
+      maxWidth: 320,
+      minWidth: 240,
+      margin: "0 auto",
+      justifyContent: "flex-start",
+
+      "& h1": {
+        transform: "translateX(-20%)",
+      },
+    },
+
+    header: {
+      maxWidth: 320,
+      minWidth: 240,
+      margin: "0 auto",
+      marginBottom: 30,
+    },
+
+    gridMain: {
+      gridTemplateColumns: "1fr",
+      "&>:nth-child(1n)": {
+        alignItems: "center",
+      },
     },
   },
 }));

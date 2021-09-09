@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import useStyles from "./styles";
 import SimpleBarReact from "simplebar-react";
 import "simplebar/src/simplebar.css";
-import SidebarContext from "../Context/SidebarContext";
 
 import MessageSvg from "../../Svg/HomeSvg/MessageSvg";
 import NotificationsSvg from "../../Svg/HomeSvg/NotificationsSvg";
