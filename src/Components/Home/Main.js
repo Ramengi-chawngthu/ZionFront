@@ -7,7 +7,7 @@ import Filter from "../../Svg/HomeSvg/FilterSvg";
 import HomeBurger from "./HomeBurger";
 
 function Main() {
-  const { isSidebar, setIsSidebar } = useContext(SidebarContext);
+  const { setIsSidebar } = useContext(SidebarContext);
   const classes = useStyles();
   const HandleClick = () => {
     setIsSidebar(true);
