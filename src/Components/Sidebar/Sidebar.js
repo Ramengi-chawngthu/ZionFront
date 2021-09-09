@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import useStyles from "./styles";
 import SimpleBarReact from "simplebar-react";
 import "simplebar/src/simplebar.css";
+import Burger from "./Burger";
 import SidebarContext from "../Context/SidebarContext";
 
 import MessageSvg from "../../Svg/HomeSvg/MessageSvg";
@@ -17,6 +18,7 @@ import SettingsSvg from "../../Svg/HomeSvg/SettingsSvg";
 import LogoutSvg from "../../Svg/HomeSvg/LogoutSvg";
 
 function Sidebar() {
+  const { isSidebar, setIsSidebar } = useContext(SidebarContext);
   const classes = useStyles();
   const [optionSelect, setOptionSelect] = useState(0);
   const MyProfile = useRef();
@@ -89,11 +91,18 @@ function Sidebar() {
     }
   }, [optionSelect]);
 
+  const sidebar = isSidebar ? classes.sidebarActive : classes.sidebar;
+  const handleClick = () => {
+    setIsSidebar((val) => !val);
+  };
+
   return (
-    <SimpleBarReact className={classes.sidebar}>
+    <SimpleBarReact className={sidebar}>
       <div className={classes.container}>
         <nav className={classes.nav}>
-          <span></span>
+          <div className={classes.burger}>
+            <Burger handleClick={handleClick} />
+          </div>
           <div className={classes.navIcons}>
             <MessageSvg />
             <NotificationsSvg />

@@ -1,193 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  sidebar: {
-    color: theme.palette.primary.main,
-    position: "fixed",
-    top: 5,
-    left: 7,
-    bottom: 0,
-    width: 260,
-    maxWidth: 300,
-    minWidth: 180,
-    height: "99vh",
-    overflow: "auto",
-    border: "1px solid #7768f28a",
-    backgroundColor: "rgba( 255, 255, 255, 0.25 )",
-    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.15 )",
-    backdropFilter: "blur( 8.5px )",
-    borderRadius: 20,
-    "-webkit-backdrop-filter": "blur( 8.5px )",
-
-    "@media (max-width:1220px)": {
-      width: "230px",
-    },
-  },
-
-  container: {
-    position: "relative",
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-  },
-
-  nav: {
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    paddingTop: 30,
-
-    "& span": {
-      marginRight: "auto",
-      marginLeft: 4,
-    },
-
-    "& svg": {
-      margin: "0 4px",
-      height: 40,
-      width: 40,
-      cursor: "pointer",
-    },
-  },
-
-  navIcons: {
-    marginRight: 10,
-    marginBottom: 2,
-  },
-
-  navSearchBarDiv: {
-    padding: "35px 0",
-    display: "flex",
-    justifyContent: "center",
-  },
-
-  navSearchBarForm: {
-    position: "relative",
-    width: 210,
-    height: 40,
-    borderRadius: 40,
-    border: "1px solid #7768F2",
-
-    "& button": {
-      backgroundColor: "rgba( 255, 255, 255, 0.25 )",
-      padding: 0,
-      cursor: "pointer",
-      position: "absolute",
-      right: 0,
-      top: 0,
-      transform: "translate(-40%,25%)",
-      border: "none",
-      "& svg": {
-        cursor: "pointer",
-        backgroundColor: "rgba( 255, 255, 255, 0.25 )",
-      },
-    },
-  },
-
-  navSearchBar: {
-    width: "75%",
-    fontFamily: "Gilroy-Medium, sans-serif",
-    position: "absolute",
-    top: "50%",
-    left: "45%",
-    transform: "translate(-50%,-50%)",
-    outline: "none",
-    border: "none",
-    backgroundColor: "rgba( 255, 255, 255, 0.25 )",
-  },
-
-  options1: {
-    "& ul": {
-      paddingLeft: 0,
-      listStyle: "none",
-
-      "& li": {
-        borderRadius: 10,
-        marginLeft: 25,
-        marginBottom: 30,
-        display: "flex",
-        alignItems: "center",
-        fontFamily: "Lato, sans-serif",
-        cursor: "pointer",
-        fontSize: 16,
-        lineHeight: 3.5,
-        width: "80%",
-
-        "& span": {
-          marginLeft: 12,
-        },
-
-        "& svg": {
-          overflow: "visible",
-          marginLeft: 20,
-          width: 27,
-          height: 27,
-        },
-      },
-    },
-  },
-
-  options2: {
-    paddingTop: 40,
-    "& ul": {
-      paddingLeft: 0,
-      listStyle: "none",
-
-      "& li": {
-        borderRadius: 5,
-        marginLeft: 25,
-        marginBottom: 30,
-        display: "flex",
-        alignItems: "center",
-        fontFamily: "Lato, sans-serif",
-        cursor: "pointer",
-        fontSize: 16,
-        lineHeight: 3.5,
-        width: "80%",
-
-        "& span": {
-          marginLeft: 12,
-        },
-
-        "& svg": {
-          overflow: "visible",
-          marginLeft: 20,
-          width: 27,
-          height: 27,
-        },
-      },
-    },
-  },
-
-  footerOptions: {
-    width: "100%",
-    fontFamily: "Lato, sans-serif",
-    fontSize: 16,
-    display: "flex",
-    justifyContent: "space-evenly",
-    marginTop: "30%",
-
-    "& div": {
-      cursor: "pointer",
-      marginBottom: 50,
-      display: "flex",
-      justifyContent: "center",
-
-      "& span": {
-        textAlign: "center",
-        marginLeft: 5,
-        display: "flex",
-        alignItems: "center",
-      },
-    },
-  },
-
-  logout: {
-    color: "#FF6B6B",
-  },
-
-  // End of sidebar
-
   main: {
     marginLeft: "25%",
     maxWidth: 1200,
@@ -200,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
     "@media (max-width:1220px)": {
       marginLeft: "33%",
     },
+  },
+
+  navigation: {
+    display: "none",
   },
 
   header: {
@@ -215,10 +32,6 @@ const useStyles = makeStyles((theme) => ({
       color: "#3F2F6A",
       fontFamily: "Gilroy-SemiBold, Lato",
     },
-  },
-
-  mainNavbar: {
-    display: "none",
   },
 
   headerButton: {
@@ -287,10 +100,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cardImg: {
-    height: 200,
+    height: 250,
     marginTop: 20,
-    borderRadius: 8,
-    overflow: "hidden",
+    backgroundColor: "#CCC",
+    backgroundImage:
+      "url(https://images.unsplash.com/photo-1629814856448-96219027f420?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80)",
+    backgroundSize: "100%",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    borderRadius: 15,
     maxWidth: 320,
     minWidth: 250,
     width: "90%",
@@ -316,11 +134,13 @@ const useStyles = makeStyles((theme) => ({
 
   cardInfo: {
     height: 60,
-    backgroundColor: "#CCA",
     marginTop: 10,
+    marginBottom: 70,
     maxWidth: 320,
     minWidth: 250,
     width: "90%",
+    display: "flex",
+    justifyContent: "space-between",
 
     [theme.breakpoints.up("lg")]: {
       maxWidth: 320,
@@ -341,74 +161,89 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  "@media (max-width: 960px)": {
-    sidebar: {
-      display: "none",
+  cardInfoTitle: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    fontFamily: "Gilroy-Reg",
+    "& h1": {
+      fontSize: 17,
+      marginTop: 0,
+      marginBottom: 0,
     },
+    "& p": {
+      fontSize: 15,
+      marginTop: 0,
+      marginBottom: 0,
+    },
+  },
 
+  cardInfoBookmark: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
+    "& svg": {
+      height: 23,
+      width: 23,
+    },
+  },
+
+  "@media screen and (max-width: 960px)": {
     main: {
       margin: "0 auto",
       width: "90%",
     },
 
-    header: {
+    navigation: {
       display: "flex",
-      flexDirection: "column",
+      justifyContent: "flex-start",
       alignItems: "center",
+      maxWidth: 320,
+      minWidth: 240,
       margin: "0 auto",
-      marginBottom: 60,
+      marginTop: 30,
 
-      "& >:nth-child(2)": {
-        fontSize: 20,
-        padding: 5,
-        marginTop: 20,
+      "& h1": {
+        marginLeft: 120,
+        transform: "translateX(-45%)",
+        fontFamily: "Gilroy-Reg, sans-serif",
+        fontSize: 28,
+      },
+
+      "& svg": {
+        cursor: "pointer",
       },
     },
 
-    mainNavbar: {
-      width: "100%",
-      display: "block",
-    },
-
-    mainNavbarContainer: {
-      width: "90%",
+    header: {
+      height: 80,
       maxWidth: 320,
-      minWidth: 240,
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      margin: "0 auto",
-    },
+      alignItems: "flex-end",
 
-    mainNavbarBurger: {
-      cursor: "pointer",
+      "& >:nth-child(1)": {
+        fontFamily: "Gilroy-Med, sans-serif",
+        fontSize: 20,
+      },
     },
 
     headerButton: {
-      padding: "10px 20px",
-      marginTop: 10,
-    },
+      height: 40,
+      width: 40,
+      justifyContent: "center",
+      "& h1": {
+        display: "none",
+      },
 
-    mainNavbarIcons: {
       "& svg": {
-        width: 35,
-        paddingTop: "5px",
-        marginLeft: 10,
-        cursor: "pointer",
+        position: "absolute",
       },
     },
 
     gridMain: {
       minWidth: 0,
       paddingBottom: 30,
-    },
-
-    cardImg: {
-      minWidth: 200,
-    },
-
-    cardInfo: {
-      minWidth: 200,
     },
   },
 }));

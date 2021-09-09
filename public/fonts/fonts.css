@@ -1,14 +1,19 @@
 @font-face {
-  font-family: "Gilroy-SemiBold";
-  src: url("./Gilroy-SemiBold.ttf");
+  font-family: 'Gilroy-SemiBold';
+  src: url('./Gilroy-SemiBold.ttf');
 }
 
 @font-face {
-  font-family: "Gilroy-Reg";
-  src: url("./Gilroy-Regular.ttf");
+  font-family: 'Gilroy-Reg';
+  src: url('./Gilroy-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Gilroy-Med";
-  src: url("./Gilroy-Medium.ttf");
+  font-family: 'Gilroy-Med';
+  src: url('./Gilroy-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy-Bol';
+  src: url('./Gilroy-Bold.ttf');
 }
