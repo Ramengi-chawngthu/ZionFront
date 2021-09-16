@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-import useStyles from "./styles";
-import SidebarContext from "../Context/SidebarContext";
-
-import Cards from "./Cards";
-import Filter from "../../Svg/HomeSvg/FilterSvg";
-import HomeBurger from "./HomeBurger";
+import React, { useContext } from 'react';
+import Filter from '../../Svg/HomeSvg/FilterSvg';
+import SidebarContext from '../Context/SidebarContext';
+import Cards from './Cards';
+import HomeBurger from './HomeBurger';
+import useStyles from './styles';
 
 function Main() {
   const { setIsSidebar } = useContext(SidebarContext);
@@ -12,17 +11,6 @@ function Main() {
   const HandleClick = () => {
     setIsSidebar(true);
   };
-
-  const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 960;
-  useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
-    // Return a function from the effect that removes the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  if (width >= breakpoint) setIsSidebar(false);
 
   return (
     <>
