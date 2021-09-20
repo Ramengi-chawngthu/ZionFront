@@ -133,6 +133,7 @@ function Sidebar() {
             <li
               style={sidebarOptions === 6 ? style : null}
               onClick={() => {
+                handleOptionSelect(6);
                 history.push('/home/store');
               }}>
               <StoresSvg />
@@ -146,16 +147,13 @@ function Sidebar() {
             <SettingsSvg />
             <span>Settings</span>
           </div>
-          <div>
+          <div
+            onClick={() => {
+              clearContext();
+              history.push('/');
+            }}>
             <LogoutSvg />
-            <span
-              className={classes.logout}
-              onClick={() => {
-                clearContext();
-                history.push('/');
-              }}>
-              Logout
-            </span>
+            <span className={classes.logout}>Logout</span>
           </div>
         </div>
       </div>

@@ -15,26 +15,20 @@ function App() {
   const [sidebarOptions, setSidebarOptions] = useState(0);
   return (
     <>
-      <SidebarOptionsContext.Provider
-        value={{ sidebarOptions, setSidebarOptions }}>
-        <SidebarContext.Provider value={{ isSidebar, setIsSidebar }}>
-          <ThemeProvider theme={Theme}>
-            <Router>
+      <Router>
+        <SidebarOptionsContext.Provider
+          value={{ sidebarOptions, setSidebarOptions }}>
+          <SidebarContext.Provider value={{ isSidebar, setIsSidebar }}>
+            <ThemeProvider theme={Theme}>
               <Switch>
-                <Route exact path='/'>
-                  <Landing />
-                </Route>
-                <Route exact path='/home'>
-                  <Home />
-                </Route>
-                <Route exact path='/home/store'>
-                  <Store />
-                </Route>
+                <Route exact path='/' component={Landing} />
+                <Route exact path='/home' component={Home} />
+                <Route exact path='/home/store' component={Store} />
               </Switch>
-            </Router>
-          </ThemeProvider>
-        </SidebarContext.Provider>
-      </SidebarOptionsContext.Provider>
+            </ThemeProvider>
+          </SidebarContext.Provider>
+        </SidebarOptionsContext.Provider>
+      </Router>
     </>
   );
 }

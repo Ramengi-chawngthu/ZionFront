@@ -110,6 +110,9 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Gilroy-Reg, sans-serif',
       color: '#FFF',
     },
+    '&:hover': {
+      backgroundColor: theme.palette.primary.main,
+    },
   },
 
   gridMain: {

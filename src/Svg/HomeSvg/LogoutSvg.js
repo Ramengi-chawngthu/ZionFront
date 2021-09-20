@@ -29,7 +29,7 @@ function LogoutSvg() {
           fill='white'
         />
       </mask>
-      <g mask="url(#mask0) overflow='visible'">
+      <g mask='url(#mask0) overflow="visible"'>
         <path
           fillRule='evenodd'
           clipRule='evenodd'
@@ -52,7 +52,7 @@ function LogoutSvg() {
           fill='white'
         />
       </mask>
-      <g mask='url(#mask1)'>
+      <g mask='url(#mask1) overflow="visible"'>
         <path
           fillRule='evenodd'
           clipRule='evenodd'

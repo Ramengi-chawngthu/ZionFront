@@ -4,6 +4,7 @@ import SidebarContext from '../Context/SidebarContext';
 import Cards from './Cards';
 import HomeBurger from './HomeBurger';
 import useStyles from './styles';
+import Button from '@material-ui/core/Button';
 
 function Main() {
   const { setIsSidebar } = useContext(SidebarContext);
@@ -22,10 +23,10 @@ function Main() {
 
         <header className={classes.header}>
           <h1>All Categories</h1>
-          <button className={classes.headerButton}>
+          <Button className={classes.headerButton}>
             <h1>Filter</h1>
             <Filter />
-          </button>
+          </Button>
         </header>
 
         <div className={classes.gridMain}>

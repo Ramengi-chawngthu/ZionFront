@@ -51,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Gilroy-Reg, sans-serif',
       color: '#FFF',
     },
+
+    '&:hover': {
+      backgroundColor: theme.palette.primary.main,
+    },
   },
 
   gridMain: {
@@ -101,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
 
   cardImg: {
     position: 'relative',
-    height: 250,
+    height: 322,
     marginTop: 20,
     backgroundColor: '#CCC',
     borderRadius: 15,
@@ -109,7 +113,8 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 250,
     width: '90%',
     overflow: 'hidden',
-    transition: 'all 0.3s ease',
+    transition: 'all 0.2s ease',
+    boxShadow: '0px 6px 18px -9px rgba(0, 0, 0, 0.55)',
 
     '& img': {
       position: 'absolute',
@@ -126,6 +131,7 @@ const useStyles = makeStyles((theme) => ({
 
     '&:hover': {
       opacity: '0.95',
+      transform: 'scale(1.01)',
     },
 
     [theme.breakpoints.up('lg')]: {
