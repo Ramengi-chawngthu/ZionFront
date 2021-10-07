@@ -1,52 +1,42 @@
-import React, { useState, useEffect, useContext } from "react";
-import useStyles from "./styles";
-import SidebarContext from "../Context/SidebarContext";
-
-import Cards from "./Cards";
-import Filter from "../../Svg/HomeSvg/FilterSvg";
-import HomeBurger from "./HomeBurger";
+import React, { useContext } from 'react';
+import Box from '@material-ui/core/Box';
+import Filter from '../../Svg/HomeSvg/FilterSvg';
+import SidebarContext from '../Context/SidebarContext';
+import Cards from './Cards/Cards';
+import HomeBurger from './HomeBurger';
+import useStyles from './HomeStyles';
+import Button from '@material-ui/core/Button';
 
 function Main() {
-  const { isSidebar, setIsSidebar } = useContext(SidebarContext);
+  const { setIsSidebar } = useContext(SidebarContext);
   const classes = useStyles();
   const HandleClick = () => {
     setIsSidebar(true);
   };
 
-  const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 960;
-  useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
-    // Return a function from the effect that removes the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  if (width >= breakpoint) setIsSidebar(false);
-
   return (
     <>
-      <div className={classes.main}>
-        <div className={classes.navigation}>
+      <Box className={classes.main}>
+        <Box className={classes.navigation}>
           <HomeBurger click={HandleClick} />
           <h1>Zion</h1>
-        </div>
+        </Box>
 
         <header className={classes.header}>
           <h1>All Categories</h1>
-          <button className={classes.headerButton}>
+          <Button className={classes.headerButton}>
             <h1>Filter</h1>
             <Filter />
-          </button>
+          </Button>
         </header>
 
-        <div className={classes.gridMain}>
+        <Box className={classes.gridMain}>
           <Cards />
           <Cards />
           <Cards />
           <Cards />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 }

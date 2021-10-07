@@ -1,15 +1,18 @@
-import useStyles from "./styles";
+import useStyles from '../Components/Landing/styles';
 //SVG's
-import Signin from "../../Svg/LandingSvg/Singin";
-import Login from "../../Svg/LandingSvg/Login";
-import Fast from "../../Svg/LandingSvg/Fast";
-import Simple from "../../Svg/LandingSvg/Simple";
-import Expose from "../../Svg/LandingSvg/Expose";
-import ExploreContent from "../../Svg/LandingSvg/ExploreContent";
+import Signin from '../Svg/LandingSvg/Signin';
+import Login from '../Svg/LandingSvg/Login';
+import Fast from '../Svg/LandingSvg/Fast';
+import Simple from '../Svg/LandingSvg/Simple';
+import Expose from '../Svg/LandingSvg/Expose';
+import ExploreContent from '../Svg/LandingSvg/ExploreContent';
 //Material UI
-import Button from "@material-ui/core/Button";
+import Button from '@material-ui/core/Button';
+//react-router-dom
+import { useHistory } from 'react-router-dom';
 
 function Landing() {
+  let history = useHistory();
   const classes = useStyles();
   return (
     <div className={classes.landing}>
@@ -58,6 +61,9 @@ function Landing() {
             variant="contained"
             color="secondary"
             className={classes.exploreBtn}
+            onClick={() => {
+              history.push('./home');
+            }}
           >
             Explore Content
             <ExploreContent />
