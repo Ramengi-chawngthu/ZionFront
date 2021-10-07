@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import Box from '@material-ui/core/Box';
 import Filter from '../../Svg/HomeSvg/FilterSvg';
 import SidebarContext from '../Context/SidebarContext';
-import Cards from './Cards';
+import Cards from './Cards/Cards';
 import HomeBurger from './HomeBurger';
-import useStyles from './styles';
+import useStyles from './HomeStyles';
 import Button from '@material-ui/core/Button';
 
 function Main() {
@@ -15,11 +16,11 @@ function Main() {
 
   return (
     <>
-      <div className={classes.main}>
-        <div className={classes.navigation}>
+      <Box className={classes.main}>
+        <Box className={classes.navigation}>
           <HomeBurger click={HandleClick} />
           <h1>Zion</h1>
-        </div>
+        </Box>
 
         <header className={classes.header}>
           <h1>All Categories</h1>
@@ -29,13 +30,13 @@ function Main() {
           </Button>
         </header>
 
-        <div className={classes.gridMain}>
+        <Box className={classes.gridMain}>
           <Cards />
           <Cards />
           <Cards />
           <Cards />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 }

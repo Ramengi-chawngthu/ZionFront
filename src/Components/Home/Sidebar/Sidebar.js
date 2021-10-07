@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import useStyles from './styles';
+import useStyles from './SidebarStyles';
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
 import SidebarContext from '../../Context/SidebarContext';
@@ -31,7 +31,7 @@ function Sidebar() {
   };
   const classes = useStyles();
   const style = {
-    backgroundColor: 'rgba(15, 16, 236, 0.1)',
+    backgroundColor: 'rgba(15, 16, 236, 0.1)'
   };
 
   function handleOptionSelect(option) {
@@ -59,7 +59,7 @@ function Sidebar() {
       <div className={classes.container}>
         <nav className={classes.nav}>
           <div className={classes.burger}>
-            <img src={closeWindow} alt='close' onClick={handleClick} />
+            <img src={closeWindow} alt="close" onClick={handleClick} />
           </div>
           <div className={classes.navIcons}>
             <MessageSvg />
@@ -72,12 +72,14 @@ function Sidebar() {
             className={classes.navSearchBarForm}
             onSubmit={(e) => {
               e.preventDefault();
-            }}>
+            }}
+          >
             <input
-              type='text'
-              placeholder='Search Products'
-              className={classes.navSearchBar}></input>
-            <button type='submit'>
+              type="text"
+              placeholder="Search Products"
+              className={classes.navSearchBar}
+            ></input>
+            <button type="submit">
               <SearchIconSvg />
             </button>
           </form>
@@ -89,7 +91,8 @@ function Sidebar() {
               style={sidebarOptions === 1 ? style : null}
               onClick={() => {
                 handleOptionSelect(1);
-              }}>
+              }}
+            >
               <MyProfileSvg />
               <span>My profile</span>
             </li>
@@ -97,7 +100,8 @@ function Sidebar() {
               style={sidebarOptions === 2 ? style : null}
               onClick={() => {
                 handleOptionSelect(2);
-              }}>
+              }}
+            >
               <FollowingSvg />
               <span>Following</span>
             </li>
@@ -105,7 +109,8 @@ function Sidebar() {
               style={sidebarOptions === 3 ? style : null}
               onClick={() => {
                 handleOptionSelect(3);
-              }}>
+              }}
+            >
               <FoloowersSvg />
               <span>Followers</span>
             </li>
@@ -113,7 +118,8 @@ function Sidebar() {
               style={sidebarOptions === 4 ? style : null}
               onClick={() => {
                 handleOptionSelect(4);
-              }}>
+              }}
+            >
               <BookmarksSvg />
               <span>Bookmarks</span>
             </li>
@@ -126,7 +132,8 @@ function Sidebar() {
               style={sidebarOptions === 5 ? style : null}
               onClick={() => {
                 handleOptionSelect(5);
-              }}>
+              }}
+            >
               <ClubsSvg />
               <span>Clubs</span>
             </li>
@@ -135,7 +142,8 @@ function Sidebar() {
               onClick={() => {
                 handleOptionSelect(6);
                 history.push('/home/store');
-              }}>
+              }}
+            >
               <StoresSvg />
               <span>Stores</span>
             </li>
@@ -151,7 +159,8 @@ function Sidebar() {
             onClick={() => {
               clearContext();
               history.push('/');
-            }}>
+            }}
+          >
             <LogoutSvg />
             <span className={classes.logout}>Logout</span>
           </div>

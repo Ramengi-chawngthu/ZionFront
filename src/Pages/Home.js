@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Sidebar from './Sidebar/Sidebar';
-import Main from './Main';
+import Sidebar from '../Components/Home/Sidebar/Sidebar';
+import Main from '../Components/Home/Main';
 
 function Home() {
   return (

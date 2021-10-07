@@ -1,6 +1,6 @@
 import React from 'react';
-import useStyles from './styles';
-import BookmarkCardSvg from '../../Svg/HomeSvg/BookmarkCardSvg';
+import useStyles from './CardStyles';
+import BookmarkCardSvg from '../../../Svg/HomeSvg/BookmarkCardSvg';
 
 function Cards({ image }) {
   const imgPlaceholder =
@@ -10,7 +10,7 @@ function Cards({ image }) {
   return (
     <div className={classes.cardItem}>
       <div className={classes.cardImg}>
-        <img alt='' src={imgLink} />
+        <img alt="" src={imgLink} />
       </div>
       <div className={classes.cardInfo}>
         <div className={classes.cardInfoTitle}>

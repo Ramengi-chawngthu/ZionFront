@@ -5,25 +5,25 @@ const useStyles = makeStyles((theme) => ({
     width: '70%',
     margin: '0 auto',
     transform: 'translateX(15%)',
-    paddingTop: 30,
+    paddingTop: 30
   },
   navigation: {
-    display: 'none',
+    display: 'none'
   },
 
   title: {
     '& h1': {
       fontSize: 28,
       color: '#3F2F6A',
-      fontFamily: 'Gilroy-SemiBold, Lato',
-    },
+      fontFamily: 'Gilroy-SemiBold, Lato'
+    }
   },
 
   header: {
     display: 'flex',
     alignItems: 'center',
     marginTop: 60,
-    height: 90,
+    height: 90
   },
 
   banner: {
@@ -43,14 +43,14 @@ const useStyles = makeStyles((theme) => ({
       objectPosition: 'center 80%',
       width: '100%',
       height: 'inherit',
-      cursor: 'pointer',
-    },
+      cursor: 'pointer'
+    }
   },
 
   searchBox: {
     padding: '35px 0',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   searchForm: {
@@ -71,9 +71,9 @@ const useStyles = makeStyles((theme) => ({
       border: 'none',
       '& svg': {
         cursor: 'pointer',
-        backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
-      },
-    },
+        backgroundColor: 'rgba( 255, 255, 255, 0.25 )'
+      }
+    }
   },
 
   searchInput: {
@@ -86,11 +86,11 @@ const useStyles = makeStyles((theme) => ({
     outline: 'none',
     border: 'none',
     backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
-    fontSize: 16,
+    fontSize: 16
   },
 
   filter: {
-    marginLeft: 'auto',
+    marginLeft: 'auto'
   },
 
   headerButton: {
@@ -108,11 +108,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 17,
       textTransform: 'capitalize',
       fontFamily: 'Gilroy-Reg, sans-serif',
-      color: '#FFF',
+      color: '#FFF'
     },
     '&:hover': {
-      backgroundColor: theme.palette.primary.main,
-    },
+      backgroundColor: theme.palette.primary.main
+    }
   },
 
   gridMain: {
@@ -120,40 +120,40 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: '1fr 1fr 1fr',
     '&>:nth-child(1n)': {
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'column'
     },
 
     '&>:nth-child(3n + 2)': {
-      alignItems: 'center',
+      alignItems: 'center'
     },
 
     '&>:nth-child(3n + 3)': {
-      alignItems: 'flex-end',
-    },
+      alignItems: 'flex-end'
+    }
   },
 
   '@media screen and (max-width: 1200px)': {
     main: {
       width: '60%',
-      transform: 'translateX(20%)',
+      transform: 'translateX(20%)'
     },
 
     gridMain: {
       gridTemplateColumns: '1fr 1fr',
       '&>:nth-child(2n+1)': {
-        alignItems: 'flex-start',
+        alignItems: 'flex-start'
       },
 
       '&>:nth-child(2n+2)': {
-        alignItems: 'flex-end',
-      },
-    },
+        alignItems: 'flex-end'
+      }
+    }
   },
 
   '@media screen and (max-width: 960px)': {
     main: {
       width: '90%',
-      transform: 'translateX(0)',
+      transform: 'translateX(0)'
     },
 
     navigation: {
@@ -169,26 +169,28 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         transform: 'translateX(-50%)',
         fontFamily: 'Gilroy-Reg, sans-serif',
-        fontSize: 28,
+        fontSize: 28
       },
 
       '& svg': {
-        cursor: 'pointer',
-      },
+        cursor: 'pointer'
+      }
     },
 
     headerButton: {
       height: 40,
       width: 40,
+      minWidth: 40,
+      borderRadius: '100%',
       justifyContent: 'center',
       '& h1': {
-        display: 'none',
+        display: 'none'
       },
 
       '& svg': {
-        position: 'absolute',
-      },
-    },
+        position: 'absolute'
+      }
+    }
   },
 
   '@media screen and (max-width: 700px)': {
@@ -196,19 +198,19 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 320,
       minWidth: 240,
       margin: '0 auto',
-      marginBottom: 60,
+      marginBottom: 60
     },
 
     title: {
       maxWidth: 320,
       minWidth: 240,
-      margin: '0 auto',
+      margin: '0 auto'
     },
 
     banner: {
       maxWidth: 320,
       minWidth: 240,
-      margin: '0 auto',
+      margin: '0 auto'
     },
 
     header: {
@@ -216,16 +218,16 @@ const useStyles = makeStyles((theme) => ({
       minWidth: 240,
       margin: '0 auto',
       marginTop: 60,
-      height: 50,
+      height: 50
     },
 
     gridMain: {
       gridTemplateColumns: '1fr',
       '&>:nth-child(1n)': {
-        alignItems: 'center',
-      },
-    },
-  },
+        alignItems: 'center'
+      }
+    }
+  }
 }));
 
 export default useStyles;

@@ -4,9 +4,9 @@ import Button from '@material-ui/core/Button';
 import Filter from '../../../Svg/HomeSvg/FilterSvg';
 import SearchIconSvg from '../../../Svg/HomeSvg/SearchIconSvg';
 import SidebarContext from '../../Context/SidebarContext';
-import Cards from '../Cards';
+import Cards from '../Cards/Cards';
 import HomeBurger from '../HomeBurger';
-import useStyles from './styles';
+import useStyles from './StoreStyles';
 import gurl from '../../../Assets/girl(1).jpg';
 
 function Main() {
@@ -30,8 +30,8 @@ function Main() {
 
         <Box className={classes.banner}>
           <img
-            src='https://images.unsplash.com/photo-1541703483865-8a7b251a58ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80'
-            alt=''
+            src="https://images.unsplash.com/photo-1541703483865-8a7b251a58ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
+            alt=""
           />
         </Box>
 
@@ -39,10 +39,11 @@ function Main() {
           <Box className={classes.searchBox}>
             <form className={classes.searchForm}>
               <input
-                type='text'
-                placeholder='Search Store'
-                className={classes.searchInput}></input>
-              <button type='submit'>
+                type="text"
+                placeholder="Search Store"
+                className={classes.searchInput}
+              ></input>
+              <button type="submit">
                 <SearchIconSvg />
               </button>
             </form>
