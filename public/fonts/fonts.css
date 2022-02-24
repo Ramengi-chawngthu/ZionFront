@@ -17,3 +17,8 @@
   font-family: 'Gilroy-Bol';
   src: url('./Gilroy-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'Bowhouse';
+  src: url('./Bowhouse-Black.otf');
+}

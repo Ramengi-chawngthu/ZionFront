@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   gridMain: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr',
+    gridRowGap: 40,
     '&>:nth-child(1n)': {
       display: 'flex',
       flexDirection: 'column'
@@ -113,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     header: {
-      height: 80,
+      height: 40,
       width: '100%',
       margin: 0,
       marginBottom: 30,

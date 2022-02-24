@@ -53,12 +53,10 @@ const useStyles = makeStyles((theme) => ({
   cardInfo: {
     height: 60,
     marginTop: 10,
-    marginBottom: 70,
     maxWidth: 320,
     minWidth: 250,
     width: '90%',
     display: 'flex',
-    justifyContent: 'space-between',
 
     [theme.breakpoints.up('lg')]: {
       maxWidth: 320,
@@ -79,12 +77,20 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 
+  cardInfoAvatar: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+
   cardInfoTitle: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
     fontFamily: 'Gilroy-Reg',
+    marginLeft: 16,
+    marginTop: 4,
+
     '& h1': {
       fontSize: 17,
       marginTop: 0,
@@ -101,10 +107,35 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-
+    marginLeft: 'auto',
     '& svg': {
       height: 23,
       width: 23
+    }
+  },
+
+  cardRating: {
+    width: '90%',
+    maxWidth: 320,
+    minWidth: 250,
+    display: 'flex',
+
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: 320,
+      minWidth: 250,
+      width: '90%'
+    },
+
+    [theme.breakpoints.between('sm', 'md')]: {
+      maxWidth: 320,
+      minWidth: 220,
+      width: '90%'
+    },
+
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 320,
+      minWidth: 240,
+      width: '90%'
     }
   }
 }));

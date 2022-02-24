@@ -17,15 +17,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.15 )',
     backdropFilter: 'blur( 8.5px )',
     borderRadius: 20,
-    '-webkit-backdrop-filter': 'blur( 8.5px )',
-
-    // '@media (max-width:1220px)': {
-    //   width: '230px',
-    // },
+    '-webkit-backdrop-filter': 'blur( 8.5px )'
   },
 
   burger: {
-    display: 'none',
+    display: 'none'
   },
 
   container: {
@@ -33,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    zIndex: 3,
+    zIndex: 3
   },
 
   nav: {
@@ -44,28 +40,28 @@ const useStyles = makeStyles((theme) => ({
 
     '& span': {
       marginRight: 'auto',
-      marginLeft: 4,
+      marginLeft: 4
     },
 
     '& svg': {
       margin: '0 4px',
       height: 40,
       width: 40,
-      cursor: 'pointer',
-    },
+      cursor: 'pointer'
+    }
   },
 
   navIcons: {
     marginRight: 10,
     marginBottom: 2,
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   navSearchBarDiv: {
     padding: '35px 0',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   navSearchBarForm: {
@@ -86,9 +82,9 @@ const useStyles = makeStyles((theme) => ({
       border: 'none',
       '& svg': {
         cursor: 'pointer',
-        backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
-      },
-    },
+        backgroundColor: 'rgba( 255, 255, 255, 0.25 )'
+      }
+    }
   },
 
   navSearchBar: {
@@ -101,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     outline: 'none',
     border: 'none',
     backgroundColor: 'rgba( 255, 255, 255, 0.25 )',
-    fontSize: 16,
+    fontSize: 16
   },
 
   options1: {
@@ -112,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
       '& li': {
         borderRadius: 10,
         marginLeft: 25,
-        marginBottom: 30,
+        marginBottom: 10,
         display: 'flex',
         alignItems: 'center',
         fontFamily: 'Lato, sans-serif',
@@ -121,18 +117,24 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: 3.5,
         width: '80%',
 
+        '& i': {
+          marginLeft: 36,
+          width: 18,
+          height: 16
+        },
+
         '& span': {
-          marginLeft: 12,
+          marginLeft: 20
         },
 
         '& svg': {
           overflow: 'visible',
           marginLeft: 20,
           width: 27,
-          height: 27,
-        },
-      },
-    },
+          height: 27
+        }
+      }
+    }
   },
 
   options2: {
@@ -144,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
       '& li': {
         borderRadius: 5,
         marginLeft: 25,
-        marginBottom: 30,
+        marginBottom: 10,
         display: 'flex',
         alignItems: 'center',
         fontFamily: 'Lato, sans-serif',
@@ -153,18 +155,24 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: 3.5,
         width: '80%',
 
+        '& i': {
+          marginLeft: 36,
+          width: 18,
+          height: 16
+        },
+
         '& span': {
-          marginLeft: 12,
+          marginLeft: 20
         },
 
         '& svg': {
           overflow: 'visible',
           marginLeft: 20,
           width: 27,
-          height: 27,
-        },
-      },
-    },
+          height: 27
+        }
+      }
+    }
   },
 
   footerOptions: {
@@ -177,7 +185,7 @@ const useStyles = makeStyles((theme) => ({
 
     '& div': {
       cursor: 'pointer',
-      marginBottom: 50,
+      marginBottom: 30,
       display: 'flex',
       justifyContent: 'center',
 
@@ -185,13 +193,13 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         marginLeft: 5,
         display: 'flex',
-        alignItems: 'center',
-      },
-    },
+        alignItems: 'center'
+      }
+    }
   },
 
   logout: {
-    color: '#FF6B6B',
+    color: '#FF6B6B'
   },
 
   '@media (max-width: 960px)': {
@@ -211,7 +219,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 0,
       transform: 'translateX(-200%)',
       transition: `transform 0.5s ${theme.transitions.easing.easeInOut}`,
-      zIndex: 2,
+      zIndex: 2
     },
 
     sidebarActive: {
@@ -231,7 +239,7 @@ const useStyles = makeStyles((theme) => ({
       width: 260,
       transition: `all 0.5s ${theme.transitions.easing.easeInOut}`,
       animation: `$sidebarIn 0.5s ${theme.transitions.easing.easeInOut}`,
-      zIndex: 2,
+      zIndex: 2
     },
 
     header: {
@@ -244,39 +252,41 @@ const useStyles = makeStyles((theme) => ({
       '& >:nth-child(2)': {
         fontSize: 20,
         padding: 5,
-        marginTop: 20,
-      },
+        marginTop: 20
+      }
     },
 
     burger: {
       cursor: 'pointer',
       marginRight: 'auto',
-      marginLeft: 20,
+      marginLeft: 40,
       height: 50,
       position: 'relative',
-      display: 'block',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
 
       '& img': {
-        height: 48,
-      },
+        height: 48
+      }
     },
 
     headerButton: {
       padding: '10px 20px',
-      marginTop: 10,
+      marginTop: 10
     },
 
     '@keyframes sidebarIn': {
       '0%': {
         opacity: 0,
-        transform: 'translateX(-200%)',
+        transform: 'translateX(-200%)'
       },
       '100%': {
         opacity: 1,
-        transform: 'translateY(0)',
-      },
-    },
-  },
+        transform: 'translateY(0)'
+      }
+    }
+  }
 }));
 
 export default useStyles;

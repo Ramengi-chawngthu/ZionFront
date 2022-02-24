@@ -1,4 +1,6 @@
 import React from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import Rating from '@material-ui/lab/Rating';
 import useStyles from './CardStyles';
 import BookmarkCardSvg from '../../../Svg/HomeSvg/BookmarkCardSvg';
 
@@ -13,6 +15,12 @@ function Cards({ image }) {
         <img alt="" src={imgLink} />
       </div>
       <div className={classes.cardInfo}>
+        <div className={classes.cardInfoAvatar}>
+          <Avatar
+            alt="Tate McRae"
+            src="https://cdn.smehost.net/2020sonymusiccouk-ukprod/wp-content/uploads/2020/03/Tate-McRae.jpg"
+          />
+        </div>
         <div className={classes.cardInfoTitle}>
           <h1>Mega Matcha</h1>
           <p>Cereminial Grade</p>
@@ -20,6 +28,14 @@ function Cards({ image }) {
         <div className={classes.cardInfoBookmark}>
           <BookmarkCardSvg />
         </div>
+      </div>
+      <div className={classes.cardRating}>
+        <Rating
+          name="half-rating-read"
+          defaultValue={2.5}
+          precision={0.5}
+          readOnly
+        />
       </div>
     </div>
   );

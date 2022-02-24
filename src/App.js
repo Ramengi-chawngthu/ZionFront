@@ -6,7 +6,8 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Theme from './Styles/Theme';
 import Landing from './Pages/Landing';
 import Home from './Pages/Home';
-import Store from './Components/Home/Store/Store';
+import Store from './Pages/Store';
+import MyProfile from './Pages/MyProfile';
 import SidebarContext from './Components/Context/SidebarContext';
 import SidebarOptionsContext from './Components/Context/SidebarOptionsContext';
 
@@ -25,6 +26,7 @@ function App() {
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/home" component={Home} />
                 <Route exact path="/home/store" component={Store} />
+                <Route exact path="/myprofile" component={MyProfile} />
               </Switch>
             </ThemeProvider>
           </SidebarContext.Provider>

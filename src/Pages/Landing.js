@@ -43,7 +43,7 @@ function Landing() {
               className={classes.titleBtn1}
             >
               <Signin />
-              Sign in
+              Sign up
             </Button>
             <Button
               variant="outlined"

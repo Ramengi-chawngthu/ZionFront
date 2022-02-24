@@ -28,13 +28,6 @@ function Main() {
           <h1>Stores</h1>
         </Box>
 
-        <Box className={classes.banner}>
-          <img
-            src="https://images.unsplash.com/photo-1541703483865-8a7b251a58ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
-            alt=""
-          />
-        </Box>
-
         <Box className={classes.header}>
           <Box className={classes.searchBox}>
             <form className={classes.searchForm}>

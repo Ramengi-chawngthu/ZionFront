@@ -1,23 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
-import useStyles from './SidebarStyles';
+import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
-import SidebarContext from '../../Context/SidebarContext';
-import SidebarOptionsContext from '../../Context/SidebarOptionsContext';
-import { useHistory } from 'react-router-dom';
-
+import LogoutSvg from '../../../Svg/HomeSvg/LogoutSvg';
 import MessageSvg from '../../../Svg/HomeSvg/MessageSvg';
 import NotificationsSvg from '../../../Svg/HomeSvg/NotificationsSvg';
 import SearchIconSvg from '../../../Svg/HomeSvg/SearchIconSvg';
-import MyProfileSvg from '../../../Svg/HomeSvg/MyProfileSvg';
-import FollowingSvg from '../../../Svg/HomeSvg/FollowingSvg';
-import FoloowersSvg from '../../../Svg/HomeSvg/FollowersSvg';
-import BookmarksSvg from '../../../Svg/HomeSvg/BookmarksSvg';
-import ClubsSvg from '../../../Svg/HomeSvg/ClubsSvg';
-import StoresSvg from '../../../Svg/HomeSvg/StoresSvg';
 import SettingsSvg from '../../../Svg/HomeSvg/SettingsSvg';
-import LogoutSvg from '../../../Svg/HomeSvg/LogoutSvg';
-import closeWindow from '../../../Assets/closeWindow.png';
+import SidebarContext from '../../Context/SidebarContext';
+import SidebarOptionsContext from '../../Context/SidebarOptionsContext';
+import useStyles from './SidebarStyles';
 
 function Sidebar() {
   let history = useHistory();
@@ -59,7 +51,7 @@ function Sidebar() {
       <div className={classes.container}>
         <nav className={classes.nav}>
           <div className={classes.burger}>
-            <img src={closeWindow} alt="close" onClick={handleClick} />
+            <i className="fas fa-arrow-left fa-2x" onClick={handleClick}></i>
           </div>
           <div className={classes.navIcons}>
             <MessageSvg />
@@ -90,38 +82,44 @@ function Sidebar() {
             <li
               style={sidebarOptions === 1 ? style : null}
               onClick={() => {
+                setIsSidebar(false);
                 handleOptionSelect(1);
+                history.push('/home');
               }}
             >
-              <MyProfileSvg />
-              <span>My profile</span>
+              <i className="fas fa-home"></i>
+              <span>Home</span>
             </li>
             <li
               style={sidebarOptions === 2 ? style : null}
               onClick={() => {
+                setIsSidebar(false);
                 handleOptionSelect(2);
+                history.push('/myprofile');
               }}
             >
-              <FollowingSvg />
-              <span>Following</span>
+              <i className="fas fa-user-circle"></i>
+              <span>My profile</span>
             </li>
             <li
               style={sidebarOptions === 3 ? style : null}
               onClick={() => {
+                setIsSidebar(false);
                 handleOptionSelect(3);
               }}
             >
-              <FoloowersSvg />
-              <span>Followers</span>
+              <i className="fas fa-users"></i>
+              <span>Following</span>
             </li>
             <li
               style={sidebarOptions === 4 ? style : null}
               onClick={() => {
+                setIsSidebar(false);
                 handleOptionSelect(4);
               }}
             >
-              <BookmarksSvg />
-              <span>Bookmarks</span>
+              <i className="fas fa-running"></i>
+              <span>Followers</span>
             </li>
           </ul>
         </div>
@@ -131,21 +129,34 @@ function Sidebar() {
             <li
               style={sidebarOptions === 5 ? style : null}
               onClick={() => {
+                setIsSidebar(false);
                 handleOptionSelect(5);
+                history.push('/home/store');
               }}
             >
-              <ClubsSvg />
-              <span>Clubs</span>
+              <i className="fas fa-store"></i>
+              <span>Stores</span>
             </li>
             <li
               style={sidebarOptions === 6 ? style : null}
               onClick={() => {
+                setIsSidebar(false);
                 handleOptionSelect(6);
-                history.push('/home/store');
+                // history.push('/home/clubs');
               }}
             >
-              <StoresSvg />
-              <span>Stores</span>
+              <i className="fas fa-gem"></i>
+              <span>Clubs</span>
+            </li>
+            <li
+              style={sidebarOptions === 7 ? style : null}
+              onClick={() => {
+                setIsSidebar(false);
+                handleOptionSelect(7);
+              }}
+            >
+              <i className="fas fa-bookmark"></i>
+              <span>Bookmarks</span>
             </li>
           </ul>
         </div>
